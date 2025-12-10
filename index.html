@@ -1,133 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$H2GX - Hydrogen Gas to the Moon 🚀💨</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-        body { margin: 0; padding: 0; background: linear-gradient(135deg, #0f0f0f, #1a0033); color: #00ffea; font-family: 'Orbitron', sans-serif; overflow-x: hidden; text-align: center; }
-        .logo { max-width: 300px; margin: 20px auto; display: block; filter: drop-shadow(0 0 20px #00ffea); animation: glow 2s ease-in-out infinite alternate; }
-        @keyframes glow { from { filter: drop-shadow(0 0 10px #00ffea); } to { filter: drop-shadow(0 0 30px #00ffea); } }
-        .glitch { font-size: 5rem; font-weight: 900; text-transform: uppercase; position: relative; display: inline-block; animation: glitch 2s infinite; }
-        .glitch::before, .glitch::after { content: '$H2GX'; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .glitch::before { animation: glitch-1 0.5s infinite; color: #ff00ff; z-index: -1; }
-        .glitch::after { animation: glitch-2 0.5s infinite; color: #00ffff; z-index: -2; }
-        @keyframes glitch { 0% { text-shadow: 0.05em 0 0 #00fffc, -0.05em -0.025em 0 #fc00ff; } 15% { text-shadow: 0.05em 0 0 #fc00ff, -0.05em 0 0 #00fffc; } 50% { text-shadow: -0.025em -0.05em 0 #fc00ff, 0.025em 0.025em 0 #00fffc; } 100% { text-shadow: 0.05em 0 0 #00fffc, -0.05em -0.025em 0 #fc00ff; } }
-        @keyframes glitch-1 { 0%,100% { clip: rect(0, 9999px, 0, 0); transform: skew(0.7deg); } 5% { clip: rect(0, 9999px, 0, 0); transform: skew(0.3deg); } 10% { clip: rect(0, 9999px, 0, 0); transform: skew(0.5deg); } }
-        @keyframes glitch-2 { 0%,100% { clip: rect(0, 9999px, 0, 0); transform: skew(0.2deg); } 5% { clip: rect(0, 9999px, 0, 0); transform: skew(0.1deg); } 10% { clip: rect(0, 9999px, 0, 0); transform: skew(0.4deg); } }
-        .container { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
-        h2 { font-family: 'Press Start 2P', cursive; color: #ff00ff; text-shadow: 0 0 20px #ff00ff; margin-top: 40px; }
-        .ca { font-size: 1.2rem; background: #000000aa; padding: 20px; border-radius: 15px; margin: 30px 0; word-wrap: break-word; border: 3px solid #00ffea; box-shadow: 0 0 30px #00ffea; }
-        .social-btn { display: inline-block; margin: 20px; padding: 15px 40px; background: #ff00ff; color: black; font-weight: bold; text-decoration: none; border-radius: 50px; font-size: 1.5rem; box-shadow: 0 0 20px #ff00ff; transition: all 0.3s; }
-        .social-btn:hover { transform: scale(1.1); box-shadow: 0 0 40px #ff00ff; }
-        .twitch { background: #9146ff; box-shadow: 0 0 20px #9146ff; }
-        .youtube { background: #ff0000; box-shadow: 0 0 20px #ff0000; }
-        .tg, .x { background: #00d4ff; box-shadow: 0 0 20px #00d4ff; }
-        .dex { background: #00ff00; color: black; box-shadow: 0 0 20px #00ff00; }
-        .roadmap { background: #00000088; padding: 30px; border-radius: 20px; margin: 40px 0; border: 2px solid #ff00ff; text-align: left; }
-        .roadmap h3 { color: #00ffea; cursor: pointer; margin-bottom: 10px; text-shadow: 0 0 10px #00ffea; }
-        .roadmap details { margin-bottom: 20px; }
-        .roadmap summary { font-weight: bold; color: #ff00ff; }
-        .pumpkin { font-size: 4rem; animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-        @media (max-width: 768px) { .glitch { font-size: 3rem; } .social-btn { display: block; margin: 10px auto; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$H2GX - Blue Collar to the Moon</title>
+<style>
+  body {margin:0;padding:0;background:linear-gradient(135deg,#0a001a,#000);color:#00ffea;font-family:Arial,sans-serif;text-align:center;overflow-x:hidden}
+  .logo {max-width:90%;margin:30px auto;display:block;filter:drop-shadow(0 0 30px #00ffea)}
+  h1 {font-size:4rem;font-weight:900;background:linear-gradient(#00ffff,#ff00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:pulse 3s infinite}
+  @keyframes pulse {0%,100%{text-shadow:0 0 20px #00ffff}50%{text-shadow:0 0 50px #ff00ff}}
+  .ca {background:#0008;padding:20px;border-radius:15px;margin:20px auto;max-width:90%;border:3px solid #00ffea;box-shadow:0 0 40px #00ffea;word-wrap:break-word;font-size:1.3rem}
+  .btn {display:block;margin:15px auto;padding:18px;border-radius:50px;color:#000;font-weight:bold;text-decoration:none;font-size:1.5rem;width:85%;max-width:400px;box-shadow:0 0 30px}
+  .twitch {background:#9146ff;box-shadow:0 0 30px #9146ff}
+  .youtube {background:#ff0000;box-shadow:0 0 30px #ff0000}
+  .facebook {background:#1877f2;box-shadow:0 0 30px #1877f2}
+  .pump {background:#00ff00;color:#000;box-shadow:0 0 30px #00ff00}
+  .tg {background:#0088cc;box-shadow:0 0 30px #0088cc}
+  .x {background:#000;color:#fff;box-shadow:0 0 30px #fff}
+  h2 {color:#ff00ff;margin:40px 0 20px;font-size:2rem}
+  .phase {background:#000c;padding:25px;border-radius:20px;margin:30px auto;max-width:90%;border:2px solid #ff00ff}
+  .phase h3 {color:#00ffea;margin:0}
+  .current {border:3px solid #00ff00;animation:glow 2s infinite}
+  @keyframes glow {0%{box-shadow:0 0 20px #00ff00}50%{box-shadow:0 0 50px #00ff00}100%{box-shadow:0 0 20px #00ff00}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://i.imgur.com/8iF5k3P.png" alt="Hustle Holix Gaming Logo" class="logo"> <!-- Your logo link; swap if needed -->
-        <h1 class="glitch">$H2GX</h1>
-        <p style="font-size:2rem;">Hydrogen Gas to the Moon 💨🚀</p>
-        <div class="pumpkin">💨☁️🚀💨☁️🚀</div>
 
-        <h2>Contract Address (Solana)</h2>
-        <div class="ca">
-            BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump
-        </div>
+<img src="logo.png" alt="Hustle Holix Gaming" class="logo">
 
-        <p>CA also copied to your clipboard when you visit 🔥</p>
+<h1>$H2GX</h1>
+<p style="font-size:2.2rem;margin:20px">Blue Collar to the Moon 💪♻️</p>
 
-        <h2>Live with the legend</h2>
-        <a href="https://twitch.tv/H2GX" target="_blank" class="social-btn twitch">🔴 TWITCH: H2GX</a>
-        <a href="https://youtube.com/@HustleHolixGaming" target="_blank" class="social-btn youtube">📺 YOUTUBE: Hustle Holix Gaming</a>
+<div class="ca">BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump</div>
+<p>CA auto-copied when you landed 🔥</p>
 
-        <h2>Community</h2>
-        <a href="https://t.me/HustleHokixGrindRoom" target="_blank" class="social-btn tg">💬 Telegram</a>
-        <a href="https://x.com/H2GX" target="_blank" class="social-btn x">🐦 X / Twitter</a>
-        <a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank" class="social-btn dex">🟢 Buy on Pump.fun</a>
+<a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" class="btn pump">Buy on Pump.fun</a>
+<a href="https://twitch.tv/H2GX" class="btn twitch">Twitch Live – H2GX</a>
+<a href="https://youtube.com/@HustleHolixGaming" class="btn youtube">YouTube – Hustle Holix Gaming</a>
+<a href="https://facebook.com/HustleHolixGaming" class="btn facebook">Facebook Live</a>
+<a href="https://t.me/HustleHokixGrindRoom" class="btn tg">Telegram Community</a>
+<a href="https://x.com/H2GX" class="btn x">X / Twitter</a>
 
-        <h2>$H2GX LAUNCH MISSION</h2>
-        <div class="roadmap">
-            <p style="font-size:1.2rem; color:#ff00ff; text-align:center;"><strong>The fairest, slowest, most diamond-handed graduation on Solana<br>No whales. Small bags only. We fill this curve one $20 buy at a time.<br>See you on Raydium in 6–12 months with the healthiest chart you’ve ever seen. ♻️💨</strong></p>
-            <details>
-                <summary><h3>1. Make Whales Physically Uncomfortable to Buy</h3></summary>
-                <p>Do these from day 1 and <strong>never turn them off</strong>:<br>
-                - <strong>Hard Buy Limits via Bots</strong><br>
-                Use a Solana sniper-prevention bot (very cheap, ~1–2 SOL one-time):<br>
-                - Max 0.5–1 SOL per wallet per 10–15 minutes<br>
-                - Max 2–3 SOL per wallet total on the entire curve<br>
-                Popular ones used by fair-launch communities in 2025:<br>
-                - @AntiSnipeBot (Telegram)<br>
-                - Jupiter Strict List mode + custom limit bot<br>
-                - Smithii Anti-Whale Tool (built-in for Pump.fun tokens)<br><br>
-                - <strong>Publicly Shame Large Buys</strong><br>
-                Pin this message everywhere:<br>
-                “Any buy >1.5 SOL will be publicly called out and shamed.<br>
-                We want 10,000 holders, not 10 whales.<br>
-                Big buys will be doxxed on the timeline until you sell.”<br><br>
-                - <strong>Reward Tiny Buys Only</strong><br>
-                - Leaderboard for “Most Buys” (not biggest buy)<br>
-                - 0.05–0.2 SOL buys get entered into daily 1 SOL raffle<br>
-                - First 5,000 wallets under 0.5 SOL get “OG Believer” role + future airdrop</p>
-            </details>
-            <details>
-                <summary><h3>2. Active Whale-Deterrence Tactics (Do Daily)</h3></summary>
-                <p>- Live “Whale Watch” channel in Telegram that auto-posts every buy >0.8 SOL with wallet address<br>
-                - Community raid squads spam-ratio any whale that tries to buy big<br>
-                - Dev/Mods constantly post: “We are the anti-whale coin. Big bags will be bullied until you distribute.”<br>
-                - If someone still buys 5+ SOL → community coordinates to buy more after them to dilute their %</p>
-            </details>
-            <details>
-                <summary><h3>3. Make the Curve Intentionally Slow & Boring for Whales</h3></summary>
-                <p>Whales hate slow, low-volume charts — that’s your superpower.<br>
-                - Never run paid KOL waves during the curve (save them for week 1 on Raydium)<br>
-                - No “countdown to graduation” hype<br>
-                - Daily message: “We are happy taking 6–12 months if needed. Whales can f*** off.”<br>
-                - Turn the slow pace into the meme: “$H2GX – the only coin too boring for whales”</p>
-            </details>
-            <details>
-                <summary><h3>4. Technical Tricks (Extra Layer)</h3></summary>
-                <p>- Use Pump.fun “Dev Buy” to add tiny liquidity yourself over weeks (0.1–0.3 SOL at a time) to smooth the curve<br>
-                - Deploy a second mini-community wallet that buys 0.1 SOL every time someone buys >1 SOL (dilutes them instantly)</p>
-            </details>
-            <details>
-                <summary><h3>5. What to Do If a Whale Still Sneaks In</h3></summary>
-                <p>- Immediate community action:<br>
-                “Wallet ………… just bought X SOL.<br>
-                We will now out-buy and out-hold him.<br>
-                Raid the curve for the next 24 h.”<br>
-                (This actually works — whales panic and sell into strength or get diluted)<br><br>
-                <strong>Result You Want on Graduation Day</strong><br>
-                - Raydium launch with:<br>
-                - 5,000–15,000 holders<br>
-                - Largest wallet <1.5% of supply<br>
-                - Flat or slowly rising chart for weeks → real organic growth afterward</p>
-            </details>
-        </div>
+<h2>BLUE COLLAR FOREVER ROADMAP</h2>
 
-        <br><br>
-        <p style="font-size:1rem;color:#888;">$H2GX 2025 | Pure meme energy | No utility, just vibes 💨</p>
-    </div>
+<div class="phase current">
+  <h3>Phase 1 – Lay the Foundation (NOW)</h3>
+  <p>Fair launch • Anti-snipe bots • Max 1 SOL buys • Live raids from every stream</p>
+</div>
 
-    <script>
-        // Auto copy CA when page loads
-        const ca = "BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump";
-        if (navigator.clipboard) {
-            navigator.clipboard.writeText(ca).then(() => {
-                console.log('CA copied!');
-            });
-        }
-    </script>
+<div class="phase">
+  <h3>Phase 2 – Stream Crew Assembly</h3>
+  <p>Every holder gets “Crew” role • Jump on stream with me • Weekly Holder Takeover Nights • In-game tags & overlays</p>
+</div>
+
+<div class="phase">
+  <h3>Phase 3 – Build the Crew (0 → 5,000 holders)</h3>
+  <p>Weekly game nights • Holder voice chats • We eat every dip together</p>
+</div>
+
+<div class="phase">
+  <h3>Phase 4 – Blue Collar Millionaires (5k → 25k holders)</h3>
+  <p>IRL meet-up + LAN party • Stream revenue → community wallet • Custom $H2GX emotes & overlays</p>
+</div>
+
+<div class="phase">
+  <h3>Phase 5 – Legacy Money (Year 3–5)</h3>
+  <p>Raydium grad • CEX listings • Lifetime revenue share → buy & burn / distribute</p>
+</div>
+
+<p style="font-size:1.8rem;margin:50px;color:#ff00ff"><strong>2030 Goal</strong><br>10–50M MC built the hard way<br>OGs financially free<br>Memories that last forever</p>
+
+<p style="margin:50px;color:#888">Small bags. Big dreams. 5-year grind.<br>See you at the top, family ♻️</p>
+
+<script>
+  const ca = "BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump";
+  navigator.clipboard.writeText(ca);
+</script>
+</body>
 </body>
 </html>

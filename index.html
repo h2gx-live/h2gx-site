@@ -1,81 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$H2GX - Blue Collar to the Moon</title>
-<style>
-  body {margin:0;padding:0;background:linear-gradient(135deg,#0a001a,#000);color:#00ffea;font-family:Arial,sans-serif;text-align:center;overflow-x:hidden}
-  .logo {max-width:90%;margin:30px auto;display:block;filter:drop-shadow(0 0 30px #00ffea)}
-  h1 {font-size:4rem;font-weight:900;background:linear-gradient(#00ffff,#ff00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:pulse 3s infinite}
-  @keyframes pulse {0%,100%{text-shadow:0 0 20px #00ffff}50%{text-shadow:0 0 50px #ff00ff}}
-  .ca {background:#0008;padding:20px;border-radius:15px;margin:20px auto;max-width:90%;border:3px solid #00ffea;box-shadow:0 0 40px #00ffea;word-wrap:break-word;font-size:1.3rem}
-  .btn {display:block;margin:15px auto;padding:18px;border-radius:50px;color:#000;font-weight:bold;text-decoration:none;font-size:1.5rem;width:85%;max-width:400px;box-shadow:0 0 30px}
-  .twitch {background:#9146ff;box-shadow:0 0 30px #9146ff}
-  .youtube {background:#ff0000;box-shadow:0 0 30px #ff0000}
-  .facebook {background:#1877f2;box-shadow:0 0 30px #1877f2}
-  .pump {background:#00ff00;color:#000;box-shadow:0 0 30px #00ff00}
-  .tg {background:#0088cc;box-shadow:0 0 30px #0088cc}
-  .x {background:#000;color:#fff;box-shadow:0 0 30px #fff}
-  h2 {color:#ff00ff;margin:40px 0 20px;font-size:2rem}
-  .phase {background:#000c;padding:25px;border-radius:20px;margin:30px auto;max-width:90%;border:2px solid #ff00ff}
-  .phase h3 {color:#00ffea;margin:0}
-  .current {border:3px solid #00ff00;animation:glow 2s infinite}
-  @keyframes glow {0%{box-shadow:0 0 20px #00ff00}50%{box-shadow:0 0 50px #00ff00}100%{box-shadow:0 0 20px #00ff00}}
-</style>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$H2GX - Blue Collar to the Moon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #16213e 100%);
+      color: #e0e0e0;
+      line-height: 1.6;
+      padding: 20px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1, h2, h3 {
+      background: linear-gradient(90deg, #00ff88, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin: 20px 0;
+    }
+    section {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      margin: 25px 0;
+      padding: 30px;
+      border: 1px solid rgba(0,255,136,0.3);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .hero { text-align: center; padding: 80px 20px 60px; position: relative; }
+    .hero h1 { font-size: 4.5rem; font-weight: 700; }
+    .hero h2 { font-size: 3rem; margin-top: -20px; }
+    .gradient-blob {
+      position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(0,255,136,0.15) 0%, transparent 70%);
+      animation: float 20s ease-in-out infinite; z-index: -1;
+    }
+    @keyframes float {
+      0%,100% { transform: translate(0,0) rotate(0deg); }
+      50% { transform: translate(50px, -50px) rotate(180deg); }
+    }
+    .address-container { text-align: center; margin: 30px 0; }
+    #contract {
+      width: 100%; max-width: 500px; padding: 15px;
+      background: rgba(0,0,0,0.6); border: 2px solid #00ff88;
+      color: #fff; font-family: monospace; font-size: 1.1rem;
+      border-radius: 8px; text-align: center;
+    }
+    .pop-btn {
+      margin-top: 15px; padding: 15px 40px;
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      border: none; border-radius: 50px; color: #000;
+      font-weight: bold; font-size: 1.2rem; cursor: pointer;
+      transition: all 0.3s;
+    }
+    .pop-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,255,136,0.5);
+    }
+    .phase-card {
+      background: rgba(0,0,0,0.4); margin: 20px 0; padding: 25px;
+      border-radius: 12px; border-left: 6px solid #00ff88;
+      opacity: 0; transform: translateX(-60px);
+      transition: all 0.8s ease;
+    }
+    .phase-card.visible { opacity: 1; transform: translateX(0); }
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px; margin-top: 20px;
+    }
+    .link-btn {
+      padding: 18px; text-align: center;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid transparent; border-radius: 12px;
+      text-decoration: none; color: #fff; font-weight: bold;
+      transition: all 0.4s;
+    }
+    .link-btn:hover {
+      border-color: #00ff88; background: rgba(0,255,136,0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px rgba(0,255,136,0.6);
+    }
+    @keyframes sparkle {
+      to { transform: translateY(-120vh) rotate(720deg); opacity: 0; }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 3rem; }
+      .hero h2 { font-size: 2rem; }
+    }
+  style>
+head>
 <body>
+  <div class="container">
+    <section class="hero">
+      <div class="gradient-blob">div>
+      <h1>$H2GX</h1>
+      <h2>Blue Collar to the Moon</h2>
+      <p style="font-size:1.5rem;margin-top:20px;">Blue Collar to the Moon ♻️</p>
+    section>
 
-<img src="logo.png" alt="Hustle Holix Gaming" class="logo">
+    <section class="address-container">
+      <h3>Contract Address (click to copy)</h3>
+      <input type="text" id="contract" value="YOUR_CONTRACT_ADDRESS_HERE" readonly>
+      <button class="pop-btn" onclick="copyAddress()">Copy & Launch </button>
+    section>
 
-<h1>$H2GX</h1>
-<p style="font-size:2.2rem;margin:20px">Blue Collar to the Moon 💪♻️</p>
+    <section>
+      <h2>BLUE COLLAR FOREVER ROADMAP</h2>
+      <div class="phases">
+        <div class="phase-card" data-phase="1">
+          <h3>Phase 1 – Launch</h3>
+          <p>Stealth launch on pump.fun → Build the hardest working community in crypto.</p>
+        div>
+        <div class="phase-card" data-phase="2">
+          <h3>Phase 2 – Community Takeover</h3>
+          <p>Website live → Telegram & Twitter raids → First memes dropped.</p>
+        div>
+        <div class="phase-card" data-phase="3">
+          <h3>Phase 3 – Moon Mission</h3>
+          <p>Heavy marketing push → CEX listings → Blue-collar millionaire factory activated.</p>
+        div>
+        <div class="phase-card" data-phase="4">
+          <h3>Phase 4 – Legacy</h3>
+          <p>Real-world blue-collar charity drives → $H2GX becomes the hardest working token on Solana.</p>
+        div>
+      div>
+    section>
 
-<div class="ca">BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump</div>
-<p>CA auto-copied when you landed 🔥</p>
+    <section>
+      <h3>Join the Crew</h3>
+      <div class="link-grid">
+        <a href="https://pump.fun/YOUR_PUMPFUN_LINK_HERE" class="link-btn" target="_blank">Buy on Pump.fun</a>
+        <a href="https://x.com/yourhandle" class="link-btn" target="_blank">X / Twitter</a>
+        <a href="https://t.me/yourtelegram" class="link-btn" target="_blank">Telegram</a>
+        <a href="https://www.youtube.com/@hustleholixgamingent" class="link-btn" target="_blank">YouTube – Hustle Holix Gaming</a>
+        <a href="#" class="link-btn">DexScreener (soon)</a>
+      div>
+    section>
+  div>
 
-<a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" class="btn pump">Buy on Pump.fun</a>
-<a href="https://twitch.tv/H2GX" class="btn twitch">Twitch Live – H2GX</a>
-<a href="https://youtube.com/@HustleHolixGaming" class="btn youtube">YouTube – Hustle Holix Gaming</a>
-<a href="https://facebook.com/HustleHolixGaming" class="btn facebook">Facebook Live</a>
-<a href="https://t.me/HustleHokixGrindRoom" class="btn tg">Telegram Community</a>
-<a href="https://x.com/H2GX" class="btn x">X / Twitter</a>
+  <script>
+    function copyAddress() {
+      const addr = document.getElementById('contract');
+      navigator.clipboard.writeText(addr.value);
+      for(let i=0; i<60; i++){
+        const s = document.createElement('div');
+        s.style.cssText = `position:fixed;width:6px;height:6px;background:#00ff88;border-radius:50%;pointer-events:none;z-index:9999;left:${Math.random()*100}vw;top:90vh;animation:sparkle 1.5s ease-out forwards`;
+        document.body.appendChild(s);
+        setTimeout(()=>s.remove(), 1500);
+      }
+    }
 
-<h2>BLUE COLLAR FOREVER ROADMAP</h2>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          const delay = (e.target.dataset.phase || 0) * 0.2;
+          e.target.style.transitionDelay = delay + 's';
+        }
+      });
+    }, { threshold: 0.2 });
 
-<div class="phase current">
-  <h3>Phase 1 – Lay the Foundation (NOW)</h3>
-  <p>Fair launch • Anti-snipe bots • Max 1 SOL buys • Live raids from every stream</p>
-</div>
-
-<div class="phase">
-  <h3>Phase 2 – Stream Crew Assembly</h3>
-  <p>Every holder gets “Crew” role • Jump on stream with me • Weekly Holder Takeover Nights • In-game tags & overlays</p>
-</div>
-
-<div class="phase">
-  <h3>Phase 3 – Build the Crew (0 → 5,000 holders)</h3>
-  <p>Weekly game nights • Holder voice chats • We eat every dip together</p>
-</div>
-
-<div class="phase">
-  <h3>Phase 4 – Blue Collar Millionaires (5k → 25k holders)</h3>
-  <p>IRL meet-up + LAN party • Stream revenue → community wallet • Custom $H2GX emotes & overlays</p>
-</div>
-
-<div class="phase">
-  <h3>Phase 5 – Legacy Money (Year 3–5)</h3>
-  <p>Raydium grad • CEX listings • Lifetime revenue share → buy & burn / distribute</p>
-</div>
-
-<p style="font-size:1.8rem;margin:50px;color:#ff00ff"><strong>2030 Goal</strong><br>10–50M MC built the hard way<br>OGs financially free<br>Memories that last forever</p>
-
-<p style="margin:50px;color:#888">Small bags. Big dreams. 5-year grind.<br>See you at the top, family ♻️</p>
-
-<script>
-  const ca = "BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump";
-  navigator.clipboard.writeText(ca);
-</script>
-</body>
-</body>
-</html>
+    document.querySelectorAll('.phase-card').forEach(c => observer.observe(c));
+  script>
+body>
+html>

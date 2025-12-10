@@ -3,119 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$H2GX - Blue Collar to the Moon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <title>$H2GX | Blue Collar to the Moon</title>
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{
-      font-family:'Rajdhani',sans-serif;
-      background:linear-gradient(135deg,#0a0a0a 0%,#16213e 100%);
-      color:#e0e0e0;line-height:1.6;padding:20px;min-height:100vh;overflow-x:hidden
-    }
-    .container{max-width:900px;margin:0 auto}
-    h1,h2,h3{
-      background:linear-gradient(90deg,#00ff88,#00ccff);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-      text-align:center;margin:20px 0
-    }
-    section{
-      background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);
-      border-radius:16px;margin:25px 0;padding:30px;
-      border:1px solid rgba(0,255,136,0.3);
-      box-shadow:0 8px 32px rgba(0,0,0,0.4)
-    }
-    .hero{text-align:center;padding:80px 20px 60px;position:relative}
-    .hero h1{font-size:4.5rem;font-weight:700}
-    .hero h2{font-size:3rem;margin-top:-20px}
-    .gradient-blob{
-      position:absolute;top:-50%;left:-50%;width:200%;height:200%;
-      background:radial-gradient(circle,rgba(0,255,136,0.15)0%,transparent 70%);
-      animation:float 20s ease-in-out infinite;z-index:-1
-    }
-    @keyframes float{0%,100%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(50px,-50px) rotate(180deg)}}
-    .address-container{text-align:center;margin:30px 0}
-    #contract{
-      width:100%;max-width:500px;padding:15px;background:rgba(0,0,0,0.6);
-      border:2px solid #00ff88;color:#fff;font-family:monospace;font-size:1.1rem;
-      border-radius:8px;text-align:center
-    }
-    .pop-btn{
-      margin-top:15px;padding:15px 40px;background:linear-gradient(45deg,#00ff88,#00ccff);
-      border:none;border-radius:50px;color:#000;font-weight:bold;font-size:1.2rem;
-      cursor:pointer;transition:all .3s
-    }
-    .pop-btn:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 15px 30px rgba(0,255,136,0.5)}
-    .phase-card{
-      background:rgba(0,0,0,0.4);margin:20px 0;padding:25px;border-radius:12px;
-      border-left:6px solid #00ff88;opacity:0;transform:translateX(-60px);transition:all .8s
-    }
-    .phase-card.visible{opacity:1;transform:translateX(0)}
-    .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:20px}
-    .link-btn{
-      padding:18px;text-align:center;background:rgba(255,255,255,0.08);
-      border:1px solid transparent;border-radius:12px;text-decoration:none;
-      color:#fff;font-weight:bold;transition:all .4s
-    }
-    .link-btn:hover{
-      border-color:#00ff88;background:rgba(0,255,136,0.15);
-      transform:translateY(-4px);box-shadow:0 0 25px rgba(0,255,136,0.6)
-    }
-    @keyframes sparkle{to{transform:translateY(-120vh) rotate(720deg);opacity:0}}
-    @media(max-width:600px){.hero h1{font-size:3rem}.hero h2{font-size:2rem}}
+    body {background:#000!important;color:#fff;margin:0;font-family:Arial,sans-serif;overflow-x:hidden}
+    h1,h2,h3 {color:#00f5ff;text-shadow:0 0 10px #00f5ff,0 0 20px #00f5ff,0 0 30px #ff00ff,0 0 40px #ff00ff;animation:neon 1.5s infinite alternate;text-align:center}
+    @keyframes neon {from {text-shadow:0 0 10px #00f5ff,0 0 20px #ff00ff} to {text-shadow:0 0 20px #00f5ff,0 0 40px #ff1493,0 0 60px #ff00ff}}
+    .container {padding:20px;max-width:900px;margin:auto;text-align:center}
+    button,.copy-btn {background:linear-gradient(45deg,#ff00ff,#00ff41,#00f5ff)!important;color:#000!important;border:none!important;padding:18px 40px!important;font-size:20px;font-weight:bold;border-radius:50px;box-shadow:0 0 30px #ff00ff;animation:pulse 2s infinite;cursor:pointer}
+    @keyframes pulse {0%,100%{box-shadow:0 0 30px #ff00ff}50%{box-shadow:0 0 50px #00ff41}}
+    a {color:#ff00ff!important;text-shadow:0 0 15px #ff00ff;text-decoration:none}
+    .roadmap-phase {border:4px solid #00ff41!important;box-shadow:0 0 40px #00ff41,inset 0 0 30px #ff00ff;background:rgba(0,255,65,.15);padding:20px;margin:20px auto;border-radius:15px;max-width:800px}
+    .ca {font-size:24px;word-break:break-all;color:#00ff41;text-shadow:0 0 0 10px #00ff41}
   </style>
 </head>
 <body>
   <div class="container">
-    <section class="hero">
-      <div class="gradient-blob"></div>
-      <h1>$H2GX</h1>
-      <h2>Blue Collar to the Moon</h2>
-      <p style="font-size:1.5rem;margin-top:20px;">Blue Collar to the Moon</p>
-    </section>
+    <h1>$H2GX</h1>
+    <h2>BLUE COLLAR TO THE MOON 🛠️🌕</h2>
+    <p style="font-size:22px">Small bags. Big dreams.<br>5-year grind to legacy money.</p>
 
-    <section class="address-container">
-      <h3>Contract Address (tap to copy)</h3>
-      <input type="text" id="contract" value="BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" readonly>
-      <button class="pop-btn" onclick="copyAddress()">Copy & Launch</button>
-    </section>
+    <h2>We pump this LIVE on gaming streams<br>YouTube × Twitch × Facebook × Pump.fun</h2>
 
-    <section>
-      <h2>BLUE COLLAR FOREVER ROADMAP</h2>
-      <div class="phases">
-        <div class="phase-card" data-phase="1"><h3>Phase 1 – Lay the Foundation (NOW)</h3><p>Fair launch. Anti-snipe bots. Max 1 SOL buys. Live raids from every stream. CA auto-copied when you landed</p></div>
-        <div class="phase-card" data-phase="2"><h3>Phase 2 – Stream Crew Assembly</h3><p>Every holder gets “Crew” role. Jump on stream. Weekly Holder Takeover Nights. In-game tags & overlays.</p></div>
-        <div class="phase-card" data-phase="3"><h3>Phase 3 – Build the Crew (0 → 5,000 holders)</h3><p>Weekly game nights. Holder voice chats. “We eat every dip together.”</p></div>
-        <div class="phase-card" data-phase="4"><h3>Phase 4 – Blue Collar Millionaires (5k → 25k holders)</h3><p>IRL meet-up + LAN party. Stream revenue to community wallet. Custom $H2GX emotes & overlays.</p></div>
-        <div class="phase-card" data-phase="5"><h3>Phase 5 – Legacy Money (Year 3–5)</h3><p>Raydium grad. CEX listings. Lifetime revenue share to buy & burn / distribute.</p></div>
-        <p style="text-align:center;margin-top:30px;font-style:italic"><strong>2030 Goal:</strong> 10–50M MC built the hard way. OGs financially free. Memories that last forever. Small bags. Big dreams. 5-year grind. See you at the top, family</p>
-      </div>
-    </section>
+    <p class="ca">
+      CA: <br>
+      <strong>INSERT_YOUR_CA_HERE</strong>
+    </p>
 
-    <section>
-      <h3>Join the Crew</h3>
-      <div class="link-grid">
-        <a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" class="link-btn" target="_blank">Buy on Pump.fun</a>
-        <a href="https://twitch.tv/H2GX" class="link-btn" target="_blank">Twitch Live – H2GX</a>
-        <a href="https://www.youtube.com/@hustleholixgamingent" class="link-btn" target="_blank">YouTube – Hustle Holix Gaming</a>
-        <a href="https://facebook.com/HustleHolixGaming" class="link-btn" target="_blank">Facebook Live</a>
-        <a href="https://t.me/HustleHolixGrindRoom" class="link-btn" target="_blank">Telegram Community</a>
-        <a href="https://x.com/H2GX" class="link-btn" target="_blank">X / Twitter</a>
-      </div>
-    </section>
-  </div>
+    <button onclick="navigator.clipboard.writeText('INSERT_YOUR_CA_HERE')">COPY CA & SEND IT</button>
 
-  <script>
-    function copyAddress(){
-      const addr=document.getElementById('contract');
-      navigator.clipboard.writeText(addr.value);
-      for(let i=0;i<60;i++){
-        const s=document.createElement('div');
-        s.style.cssText=`position:fixed;width:6px;height:6px;background:#00ff88;border-radius:50%;pointer-events:none;z-index:9999;left:${Math.random()*100}vw;top:90vh;animation:sparkle 1.5s ease-out forwards`;
-        document.body.appendChild(s);setTimeout(()=>s.remove(),1500)
-      }
-    }
-    const observer=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');en.target.style.transitionDelay=(en.target.dataset.phase*0.2)+'s'}})},{threshold:0.2});
-    document.querySelectorAll('.phase-card').forEach(c=>observer.observe(c));
-  </script>
-</body>
-</html>
+    <h2>Roadmap – We Eat Every​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​

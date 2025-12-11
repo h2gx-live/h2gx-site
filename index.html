@@ -7,7 +7,7 @@
   <style>
     body{background:#000;color:#fff;margin:0;font-family:Arial;overflow-x:hidden}
     h1,h2,h3{color:#00f5ff;text-shadow:0 0 10px #00f5ff,0 0 20px #00f5ff,0 0 30px #ff00ff,0 0 40px #ff00ff;animation:n 1.5s infinite alternate;text-align:center}
-    @keyframes n{from{text-shadow:0 0 10px #00f5ff,0 0 0 20px #ff00ff}to{text-shadow:0 0 20px #00f5ff,0 0 40px #ff1493,0 0 60px #ff00ff}}
+    @keyframes n{from{text-shadow:0 0 10px #00f5ff,0 0 20px #ff00ff}to{text-shadow:0 0 20px #00f5ff,0 0 40px #ff1493,0 0 60px #ff00ff}}
     .container{padding:20px;max-width:900px;margin:auto;text-align:center}
     .logo{max-width:300px;margin:30px auto;border-radius:25px;box-shadow:0 0 50px #ff00ff,0 0 80px #00ff41;animation:p 3s infinite}
     @keyframes p{0%,100%{box-shadow:0 0 50px #ff00ff}50%{box-shadow:0 0 90px #00ff41}}
@@ -15,12 +15,25 @@
     @keyframes g{0%,100%{box-shadow:0 0 40px #ff00ff}50%{box-shadow:0 0 70px #00ff41}}
     .ca{font-size:21px;word-break:break-all;color:#00ff41;text-shadow:0 0 25px #00ff41;margin:40px 0}
     .slowsteady{font-size:27px;font-weight:bold;color:#00ff41;text-shadow:0 0 30px #00ff41;margin:25px 0}
-    .accordion{border:3px solid #00ff41;border-radius:20px;margin:20px auto;max-width:850px;background:rgba(0,255,65,.08);overflow:hidden}
-    .acc-title{background:linear-gradient(90deg,#ff00ff,#00f5ff);padding:20px;font-size:22px;cursor:pointer;text-align:left;position:relative}
-    .acc-title::after{content:"+";position:absolute;right:25px;font-size:30px;top:12px;transition:0.4s}
-    .acc-title.active::after{content:"−"}
-    .acc-content{padding:0 25px;max-height:0;overflow:hidden;transition:max-height 0.6s ease;background:rgba(0,0,0,0.7)}
-    .acc-content p{margin:20px 0;line-height:1.7;font-size:18px}
+    
+    /* PHASE ANIMATION */
+    .phase{
+      border:4px solid #00ff41;
+      border-radius:25px;
+      margin:30px auto;
+      padding:25px;
+      background:rgba(0,255,65,.1);
+      box-shadow:0 0 50px #00ff41;
+      max-width:850px;
+      opacity:0;
+      transform:translateY(60px);
+      transition:all 1.2s ease-out;
+    }
+    .phase.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+    .phase h3{margin-top:0;color:#ff00ff}
   </style>
 </head>
 <body>
@@ -42,37 +55,49 @@
   <div class="ca">CA:<br><strong>H2GXSoLoTQo4VZyR4E3B8K1f3Z6u5Yb6g2pXv7vQ4qP</strong></div>
   <button onclick="navigator.clipboard.writeText('H2GXSoLoTQo4VZyR4E3B8K1f3Z6u5Yb6g2pXv7vQ4qP')">COPY CA & LOCK IN</button>
 
-  <h2 style="margin-top:50px">5-Year War Plan (Click to Expand)</h2>
+  <h2 style="margin:70px 0 40px">5-Year War Plan</h2>
 
-  <div class="accordion">
-    <div class="acc-title active">Phase 1 – LAUNCHED (December 2025) </div>
-    <div class="acc-content" style="max-height:600px">
-      <p>→ Live on Pump.fun right now<br>→ Consistent raids every stream<br>→ Top 10% volume within first 90 days purely from streaming power<br>→ Zero whales allowed — we grow slow, steady, and together</p>
-    </div>
-  </div>
+  <div class="phase"><h3>Phase 1 – LAUNCHED (December 2025) </h3><p>→ Live on Pump.fun right now<br>→ Consistent raids every stream<br>→ Top 10% volume within first 90 days purely from streaming power<br>→ Zero whales allowed — we grow slow, steady, and together</p></div>
 
-  <div class="accordion">
-    <div class="acc-title">Phase 2 – Build the Army (2025–2026)</div>
-    <div class="acc-content">
-      <p>→ Grow to 5,000+ diamond-hand holders<br>→ 3–5 live gaming + pumping streams per week<br>→ Weekly “Holder Takeover Night” — you go live, we raid with 1k+ viewers<br>→ Free custom $H2GX overlays, emotes, alerts dropped at every 1k holders</p>
-    </div>
-  </div>
+  <div class="phase"><h3>Phase 2 – Build the Army (2025–2026)</h3><p>→ Grow to 5,000+ diamond-hand holders<br>→ 3–5 live gaming + pumping streams per week<br>→ Weekly “Holder Takeover Night” — you go live, we raid with 1k+ viewers<br>→ Free custom $H2GX overlays, emotes, alerts dropped at every 1k holders</p></div>
 
-  <div class="accordion">
-    <div class="acc-title">Phase 3 – Raydium Lock-In (2026–2027)</div>
-    <div class="acc-content">
-      <p>→ Climb into Top 20 on Pump.fun with real volume<br>→ Every donation/sub/bit → community wallet<br>→ Weekly live buy & burn on stream (watch supply drop in real time)<br>→ Raydium listing paid 100% by the squad</p>
-    </div>
-  </div>
+  <div class="phase"><h3>Phase 3 – Raydium Lock-In (2026–2027)</h3><p>→ Climb into Top 20 on Pump.fun with real volume<br>→ Every donation/sub/bit → community wallet<br>→ Weekly live buy & burn on stream (watch supply drop in real time)<br>→ Raydium listing paid 100% by the squad</p></div>
 
-  <div class="accordion">
-    <div class="acc-title">Phase 4 – CEX Domination (2027–2028)</div>
-    <div class="acc-content">
-      <p>→ Listings on MEXC, Gate.io, Bybit, etc.<br>→ Free giveaways & exclusive merch drops to the Top 100 HODLers<br>→ Stream revenue keeps funding buybacks & burns</p>
-    </div>
-  </div>
+  <div class="phase"><h3>Phase 4 – CEX Domination (2027–2028)</h3><p>→ Listings on MEXC, Gate.io, Bybit, etc.<br>→ Free giveaways & exclusive merch drops to the Top 100 HODLers<br>→ Stream revenue keeps funding buybacks & burns</p></div>
 
-  <div class="accordion">
-    <div class="acc-title">Phase 5 – Legacy Money (2028–2030)</div>
-    <div class="acc-content">
-      <p>→ Multi​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+  <div class="phase"><h3>Phase 5 – Legacy Money (2028–2030)</h3><p>→ Multi-million dollar community treasury<br>→ Annual all-expenses-paid $H2GX LAN party / meet-up for the entire squad<br>→ We keep gaming, raiding, and hanging out together for life — just with generational wealth in our wallets</p></div>
+
+  <h2 style="margin-top:70px">Jump In the Raid</h2>
+  <a href="https://t.me/HustleHolixGrindRoom" target="_blank"><button>TELEGRAM RAID ROOM</button></a><br>
+  <a href="https://www.twitch.tv/h2gx_562" target="_blank"><button>TWITCH – LIVE WITH THE SQUAD</button></a><br>
+  <a href="https://youtube.com/@hustleholixgamingent" target="_blank"><button>YOUTUBE</button></a><br>
+  <a href="https://www.facebook.com/share/14HATPvRkaX/?mibextid=wwXIfr" target="_blank"><button>FACEBOOK</button></a><br>
+  <a href="https://x.com/h2gamingx" target="_blank"><button>X / TWITTER</button></a><br>
+  <a href="https://www.instagram.com/hustleholixgaming" target="_blank"><button>INSTAGRAM</button></a><br>
+  <a href="https://www.tiktok.com/@hustle.holix.gaming" target="_blank"><button>TIKTOK</button></a>
+
+  <p style="margin:120px 0 50px;font-size:24px;line-height:1.9">
+    Clock in. Frag with the boys. Pump the chart slow and steady.<br>
+    Five years from now we’re throwing the biggest $H2GX LAN party the world has ever seen.<br><br>
+    Blue collar today. Legacy money tomorrow.<br>
+    Welcome to the squad, family ⚒️
+  </p>
+</div>
+
+<script>
+  // Scroll animation — super smooth & lightweight
+  const phases = document.querySelectorAll('.phase');
+  const options = { threshold: 0.2 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, options);
+
+  phases.forEach(phase => observer.observe(phase));
+</script>
+</body>
+</html>

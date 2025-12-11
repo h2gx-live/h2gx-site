@@ -6,11 +6,13 @@
   <title>$H2GX | Live Gaming Streamers & Diamond Hands</title>
   <style>
     body{background:#000;color:#fff;margin:0;font-family:Arial;overflow-x:hidden}
-    h1,h2,h3{color:#00f5ff;text-shadow:0 0 10px #00f5ff,0 0 20px #00f5ff,0 0 30px #ff00ff,0 0 40px #ff00ff;animation:n 1.5s infinite alternate;text-align:center}
-    @keyframes n{from{text-shadow:0 0 10px #00f5ff,0 0 20px #ff00ff}to{text-shadow:0 0 20px #00f5ff,0 0 40px #ff1493,0 0 60px #ff00ff}}
+    h1,h2,h3{color:#00f5ff;text-shadow:0 0 10px #00f5ff,0 0 20px #00f5ff,0 0 30px #ff00ff,0 0 40px #ff00ff;animation:n 1.5s infinite alternate infinite}
+    @keyframes n{from{opacity:.9;text-shadow:0 0 10px #00f5ff,0 0 20px #ff00ff}to{opacity:1;text-shadow:0 0 20px #00f5ff,0 0 40px #ff1493,0 0 60px #ff00ff}}
     .container{padding:20px;max-width:900px;margin:auto;text-align:center}
-    button,.social-btn,.copy-btn{background:linear-gradient(45deg,#ff00ff,#00ff41,#00f5ff);color:#000;border:none;padding:18px 35px;font-size:18px;font-weight:bold;border-radius:50px;box-shadow:0 0 30px #ff00ff;animation:p 2s infinite;margin:10px;cursor:pointer}
-    @keyframes p{0%,100%{box-shadow:0 0 30px #ff00ff}50%{box-shadow:0 0 50px #00ff41}}
+    .logo{max-width:280px;margin:20px auto;border-radius:20px;box-shadow:0 0 40px #ff00ff,0 0 60px #00ff41;animation:p 3s infinite}
+    @keyframes p{0%,100%{box-shadow:0 0 40px #ff00ff}50%{box-shadow:0 0 70px #00ff41}}
+    button,.social-btn,.copy-btn{background:linear-gradient(45deg,#ff00ff,#00ff41,#00f5ff);color:#000;border:none;padding:18px 35px;font-size:18px;font-weight:bold;border-radius:50px;box-shadow:0 0 30px #ff00ff;animation:glow 2s infinite;margin:10px;cursor:pointer}
+    @keyframes glow{0%,100%{box-shadow:0 0 30px #ff00ff}50%{box-shadow:0 0 60px #00ff41}}
     a{color:#ff00ff;text-shadow:0 0 15px #ff00ff;text-decoration:none}
     .roadmap{border:3px solid #00ff41;box-shadow:0 0 40px #00ff41,inset 0 0 30px #ff00ff;background:rgba(0,255,65,.15);padding:20px;margin:25px auto;border-radius:20px;max-width:850px}
     .ca{font-size:20px;word-break:break-all;color:#00ff41;text-shadow:0 0 20px #00ff41;margin:30px 0}
@@ -18,6 +20,11 @@
 </head>
 <body>
 <div class="container">
+
+  <!-- YOUR LOGO HERE (glowing & centered) -->
+  <img src="logo.png" alt="$H2GX Logo" class="logo">
+  <!-- if you named it logo.jpg instead, change the line above to logo.jpg -->
+
   <h1>$H2GX</h1>
   <h2>LIVE GAMING STREAMERS & MEME CHASERS<br>WITH DIAMOND HANDS</h2>
   <p style="font-size:24px">Blue Collar Grind → Moon Money<br>5-Year Legacy | We pump it LIVE every stream ⚒️🌕🎮</p>
@@ -35,21 +42,18 @@
   <div class="roadmap"><h3>Phase 5 (2028-2030) – Financial Freedom</h3>Lifetime community fund · Streamers & degens retire together</div>
 
   <h2>Live Raids Every Stream</h2>
-  <p style="font-size:22px">Come watch us pump $H2GX while clutching rounds!</p>
-
-  <h2>Join the Family</h2>
   <a href="https://t.me/HustleHolixGrindRoom" target="_blank"><button class="social-btn">TELEGRAM RAID ROOM</button></a><br>
   <a href="https://www.twitch.tv/hustle_holix_gaming" target="_blank"><button class="social-btn">TWITCH</button></a><br>
   <a href="https://youtube.com/@hustleholixgamingent" target="_blank"><button class="social-btn">YOUTUBE</button></a><br>
   <a href="https://www.facebook.com/share/14HATPvRkaX/?mibextid=wwXIfr" target="_blank"><button class="social-btn">FACEBOOK</button></a><br>
   <a href="https://x.com/h2gamingx" target="_blank"><button class="social-btn">X / TWITTER</button></a><br>
   <a href="https://www.instagram.com/hustleholixgaming" target="_blank"><button class="social-btn">INSTAGRAM</button></a><br>
-  <a href="https://www.tiktok.com/@hustle.holix.gaming" target="_blank"><button class="social-btn">TIKTOK</button></a><br>
+  <a href="https://www.tiktok.com/@hustle.holix.gaming" target="_blank"><button class="social-btn">TIKTOK</button></a>
 
   <p style="margin-top:60px;font-size:20px">
     Frag hard. Hold harder. Stream harder.<br>
     Diamond hands only.<br>
-    See you on stream, family ⚒️️
+    See you on stream, family ⚒️
   </p>
 </div>
 </body>

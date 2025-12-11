@@ -20,4 +20,95 @@
     .acc-title{background:linear-gradient(90deg,#ff00ff,#00f5ff);padding:20px;font-size:22px;cursor:pointer;text-align:left;position:relative}
     .acc-title::after{content:"+";position:absolute;right:25px;font-size:30px;top:12px;transition:0.4s}
     .acc-title.active::after{content:"−"}
-    .acc-content{padding:0 25px;max-height:0;overflow:hidden;transition:max​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    .acc-content{padding:0 25px;max-height:0;overflow:hidden;transition:max-height 0.6s ease;background:rgba(0,0,0,0.7)}
+    .acc-content p{margin:20px 0;line-height:1.7;font-size:18px}
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <img src="logo.png" alt="$H2GX Logo" class="logo">
+
+  <h1>$H2GX ⚒️ BLUE COLLAR RAID SQUAD</h1>
+  <h2>Live Gaming × Live Pumping × Lifetime Memories</h2>
+
+  <p class="slowsteady">SLOW BUT STEADY GROWTH — WHALES NOT WELCOME</p>
+
+  <p style="font-size:25px;line-height:1.6">
+    Blue-collar, community-driven fortress. I play WITH you every stream — we frag, raid, and build memories that last forever.<br>
+    Five years of grinding until every single one of us is retired.
+  </p>
+
+  <div class="ca">CA:<br><strong>H2GXSoLoTQo4VZyR4E3B8K1f3Z6u5Yb6g2pXv7vQ4qP</strong></div>
+  <button onclick="navigator.clipboard.writeText('H2GXSoLoTQo4VZyR4E3B8K1f3Z6u5Yb6g2pXv7vQ4qP')">COPY CA & LOCK IN</button>
+
+  <h2 style="margin-top:50px">5-Year War Plan (Click to Expand)</h2>
+
+  <div class="accordion">
+    <div class="acc-title active">Phase 1 – LAUNCHED (December 2025) ✅</div>
+    <div class="acc-content" style="max-height:500px">
+      <p>→ Already live on Pump.fun<br>→ Zero whale bags, zero dev dumps<br>→ Daily live raids from Day 1<br>→ First 30 days = Top 10% volume purely from stream power<br>→ Liquidity locked + ownership renounced = bulletproof</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="acc-title">Phase 2 – Build the Army (2025–2026)</div>
+    <div class="acc-content">
+      <p>→ Grow to 5,000+ real diamond-hand holders<br>→ 5–7 live gaming & pumping streams every single week<br>→ I personally play WITH the community every night<br>→ Weekly “Holder Takeover Night” — one of you goes live, we bring 1k+ raiders<br>→ Free custom $H2GX overlays, emotes, alerts, and sound packs at every 1k milestone</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="acc-title">Phase 3 – Raydium Lock-In (2026–2027)</div>
+    <div class="acc-content">
+      <p>→ Push into Top 20 on Pump.fun with pure organic volume<br>→ Every donation, sub, bit, cheer → straight to community wallet<br>→ Weekly live buy & burn on stream (you watch the supply drop in real time)<br>→ Raydium listing paid 100% by the squad — no outside money needed</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="acc-title">Phase 4 – CEX Domination (2027–2028)</div>
+    <div class="acc-content">
+      <p>→ Listings on MEXC, Gate.io, Bybit, etc.<br>→ 25% of all future stream revenue airdropped monthly to top 1,000 holders<br>→ No sell pressure ever — only buybacks and burns<br>→ First wave of raiders quit their 9-5s</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="acc-title">Phase 5 – Legacy Money (2028–2030)</div>
+    <div class="acc-content">
+      <p>→ 7-figure community fund running forever<br>→ Top 100 holders get paid monthly for life<br>→ 100+ squad members financially free because of $H2GX<br>→ We keep gaming and raiding together — just with lambos in the garage</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:50px">Jump In the Raid</h2>
+  <a href="https://t.me/HustleHolixGrindRoom" target="_blank"><button>TELEGRAM RAID ROOM</button></a><br>
+  <a href="https://www.twitch.tv/h2gx_562" target="_blank"><button>TWITCH – LIVE WITH THE SQUAD</button></a><br>
+  <a href="https://youtube.com/@hustleholixgamingent" target="_blank"><button>YOUTUBE</button></a><br>
+  <a href="https://www.facebook.com/share/14HATPvRkaX/?mibextid=wwXIfr" target="_blank"><button>FACEBOOK</button></a><br>
+  <a href="https://x.com/h2gamingx" target="_blank"><button>X / TWITTER</button></a><br>
+  <a href="https://www.instagram.com/hustleholixgaming" target="_blank"><button>INSTAGRAM</button></a><br>
+  <a href="https://www.tiktok.com/@hustle.holix.gaming" target="_blank"><button>TIKTOK</button></a>
+
+  <p style="margin:90px;font-size:24px;line-height:1.9">
+    Clock in. Frag with the boys. Pump the chart slow and steady.<br>
+    Five years from now we’ll still be gaming together — just with seven-figure bags.<br><br>
+    Blue collar today. Legacy money tomorrow.<br>
+    Welcome to the squad, family ⚒️
+  </p>
+</div>
+
+<script>
+  // Simple accordion script
+  document.querySelectorAll('.acc-title').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+</body>
+</html>

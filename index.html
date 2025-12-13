@@ -26,7 +26,7 @@
             height: auto;
             z-index: -2;
             object-fit: cover;
-            filter: brightness(0.5);
+            filter: brightness(0.6); /* Slightly lighter for smoother mobile rendering */
         }
 
         .overlay {
@@ -63,6 +63,14 @@
             max-width: 800px;
             margin: 0 auto 40px;
             line-height: 1.6;
+        }
+
+        .highlight {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff00ff;
+            text-shadow: 0 0 15px #ff00ff;
+            margin: 30px auto;
         }
 
         .btn {
@@ -161,6 +169,7 @@
             z-index: 1;
             animation: fly linear forwards;
             opacity: 0.8;
+            will-change: transform; /* Better performance */
         }
 
         @keyframes fly {
@@ -182,6 +191,7 @@
             width: 100%;
             height: 100%;
             z-index: 0;
+            will-change: transform;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -201,6 +211,8 @@
         <h1>$H2GX</h1>
         <p>Fresh on pump.fun • Still in Bonding Curve • Early Grind Phase 🚀</p>
         <p style="font-size: 1.4rem; max-width: 800px; margin: 20px auto;">The slow and steady meme coin built by the community. Real growth takes time – join the family now while it's early.</p>
+        <p class="highlight">Whales are NOT allowed</p>
+        <p class="highlight">This is a SLOW and STEADY GRIND TO THE TOP!!!</p>
         <a href="https://pump.fun/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank" class="btn">Buy $H2GX on pump.fun</a>
         <a href="#roadmap" class="btn">View 5-Year Roadmap</a>
     </header>
@@ -226,11 +238,11 @@
         <div class="roadmap">
             <div class="roadmap-item">
                 <h3>Year 1 (2025–2026)<br>Foundation & Organic Growth</h3>
-                <p>Live on pump.fun ✅<br>Grind through bonding curve to Raydium<br>Real community growth on X, Twitch, and Telegram<br>Engagement 3–5 days a week: memes, raids, streams, voice chats<br>Consistent small giveaways & holder rewards<br>Community-driven burns<br>Goal: Graduate the curve together & build a loyal H2GX family</p>
+                <p>Live on pump.fun ✅<br>Real community growth on X, Twitch, and Telegram<br>Engagement 3–5 days a week: memes, raids, streams, voice chats<br>Consistent small giveaways & holder rewards<br>Community-driven burns<br>Goal: Build a loyal H2GX family – no whales, just grinders</p>
             </div>
             <div class="roadmap-item">
-                <h3>Year 2 (2026–2027)<br>Deepen Roots & Add Value</h3>
-                <p>Simple staking rewards<br>Twitch holder perks (emotes, badges)<br>Steady growth through authentic content<br>Basic merch drop<br>More community burns<br>Goal: Strengthen trust and retention</p>
+                <h3>Year 2 (2026–2027)<br>Deepen Roots & Raydium Graduation</h3>
+                <p>Grind through bonding curve to Raydium<br>Simple staking rewards<br>Twitch holder perks (emotes, badges)<br>Steady growth through authentic content<br>Basic merch drop<br>More community burns<br>Goal: Graduate together & strengthen trust</p>
             </div>
             <div class="roadmap-item">
                 <h3>Year 3 (2027–2028)<br>Expand Carefully – Community & Content Focus</h3>
@@ -265,13 +277,13 @@
     <script>
         particlesJS("particles-js", {
             particles: {
-                number: { value: 100 },
+                number: { value: 50 }, /* Reduced for smoother mobile scrolling */
                 color: { value: ["#00ffcc", "#ff00ff", "#ffffff"] },
                 shape: { type: ["circle", "edge", "triangle"] },
                 opacity: { value: 0.6, random: true },
                 size: { value: 4, random: true },
                 line_linked: { enable: true, distance: 120, color: "#ff00ff", opacity: 0.3, width: 1 },
-                move: { enable: true, speed: 3, direction: "top", straight: false }
+                move: { enable: true, speed: 2, direction: "top", straight: false } /* Slower speed */
             },
             interactivity: {
                 events: { onhover: { enable: true, mode: "repulse" } }
@@ -292,9 +304,9 @@
             }, 15000);
         }
 
-        setInterval(createRocket, 2000);
-        for (let i = 0; i < 5; i++) {
-            setTimeout(createRocket, i * 1000);
+        setInterval(createRocket, 4000); /* Less frequent rockets */
+        for (let i = 0; i < 3; i++) { /* Fewer initial rockets */
+            setTimeout(createRocket, i * 1500);
         }
     </script>
 </body>

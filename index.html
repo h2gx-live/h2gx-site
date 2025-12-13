@@ -7,16 +7,16 @@
     <style>
         body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; color: #fff; overflow-x: hidden; }
         #bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 20, 0.45); z-index: -1; } /* Reduced opacity for more visible video */
-        canvas { position: fixed; top: 0; left: 0; z-index: 0; opacity: 0.5; } /* Slightly increased particle opacity */
-        .top-logo { text-align: center; padding: 40px 20px 20px; background: rgba(0, 0, 0, 0.4); }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 20, 0.25); z-index: -1; } /* Very minimal opacity – video shows strongly */
+        canvas { position: fixed; top: 0; left: 0; z-index: 0; opacity: 0.6; } /* More visible particles */
+        .top-logo { text-align: center; padding: 40px 20px 20px; background: rgba(0, 0, 0, 0.3); }
         .top-logo img { max-width: 600px; width: 95%; height: auto; }
-        header { text-align: center; padding: 40px 20px 60px; background: rgba(0, 0, 0, 0.5); border-bottom: 2px solid #00ff41; }
+        header { text-align: center; padding: 40px 20px 60px; background: rgba(0, 0, 0, 0.4); border-bottom: 2px solid #00ff41; }
         h1 { font-size: 3.8em; margin: 10px 0; text-shadow: 0 0 15px #00ff41; }
         h2 { font-size: 2.2em; text-align: center; margin: 40px 0 20px; text-shadow: 0 0 10px #00ff41; }
-        section { max-width: 1000px; margin: 0 auto 40px; padding: 30px; background: rgba(0, 0, 0, 0.7); border-radius: 15px; border: 1px solid #00ff41; }
+        section { max-width: 1000px; margin: 0 auto 40px; padding: 30px; background: rgba(0, 0, 0, 0.6); border-radius: 15px; border: 1px solid #00ff41; } /* Slightly more transparent sections */
         .roadmap { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .year { flex: 1 1 280px; padding: 20px; background: rgba(0, 100, 65, 0.7); border-radius: 10px; border: 1px solid #00ff41; }
+        .year { flex: 1 1 280px; padding: 20px; background: rgba(0, 100, 65, 0.6); border-radius: 10px; border: 1px solid #00ff41; }
         .buy-btn { display: block; width: 300px; margin: 30px auto; padding: 18px; background: #00ff41; color: #000; font-weight: bold; font-size: 1.5em; text-align: center; text-decoration: none; border-radius: 15px; box-shadow: 0 0 20px #00ff41; }
         footer { text-align: center; padding: 40px; background: rgba(0, 0, 0, 0.8); }
         .socials { text-align: center; }
@@ -123,14 +123,14 @@
 </footer>
 
 <script>
-// Subtle green particles overlay (slightly more visible)
+// More visible particles
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let particles = [];
-const numParticles = 60; // Slightly more particles
+const numParticles = 70; // More particles for extra vibe
 
 class Particle {
     constructor() {
@@ -147,7 +147,7 @@ class Particle {
         if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
     }
     draw() {
-        ctx.fillStyle = 'rgba(0, 255, 65, 0.7)'; // Slightly brighter
+        ctx.fillStyle = 'rgba(0, 255, 65, 0.7)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();

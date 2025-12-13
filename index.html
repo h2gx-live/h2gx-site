@@ -1,103 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$H2GX ⚒️ Blue Collar Raid Squad</title>
-  <style>
-    body{background:#000;color:#fff;margin:0;font-family:Arial;overflow-x:hidden}
-    h1,h2,h3{color:#00f5ff;text-shadow:0 0 10px #00f5ff,0 0 20px #00f5ff,0 0 30px #ff00ff,0 0 40px #ff00ff;animation:n 1.5s infinite alternate;text-align:center}
-    @keyframes n{from{text-shadow:0 0 10px #00f5ff,0 0 20px #ff00ff}to{text-shadow:0 0 20px #00f5ff,0 0 40px #ff1493,0 0 60px #ff00ff}}
-    .container{padding:20px;max-width:900px;margin:auto;text-align:center}
-    .logo{max-width:300px;margin:30px auto;border-radius:25px;box-shadow:0 0 50px #ff00ff,0 0 80px #00ff41;animation:p 3s infinite}
-    @keyframes p{0%,100%{box-shadow:0 0 50px #ff00ff}50%{box-shadow:0 0 90px #00ff41}}
-    button{background:linear-gradient(45deg,#ff00ff,#00ff41,#00f5ff);color:#000;border:none;padding:18px 40px;font-size:19px;font-weight:bold;border-radius:50px;box-shadow:0 0 40px #ff00ff;animation:g 2s infinite;margin:12px;cursor:pointer}
-    @keyframes g{0%,100%{box-shadow:0 0 40px #ff00ff}50%{box-shadow:0 0 70px #00ff41}}
-    .ca{font-size:21px;word-break:break-all;color:#00ff41;text-shadow:0 0 25px #00ff41;margin:40px 0}
-    .slowsteady{font-size:27px;font-weight:bold;color:#00ff41;text-shadow:0 0 30px #00ff41;margin:25px 0}
-    
-    /* PHASE ANIMATION */
-    .phase{
-      border:4px solid #00ff41;
-      border-radius:25px;
-      margin:30px auto;
-      padding:25px;
-      background:rgba(0,255,65,.1);
-      box-shadow:0 0 50px #00ff41;
-      max-width:850px;
-      opacity:0;
-      transform:translateY(60px);
-      transition:all 1.2s ease-out;
-    }
-    .phase.visible{
-      opacity:1;
-      transform:translateY(0);
-    }
-    .phase h3{margin-top:0;color:#ff00ff}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$H2GX - The Ultimate Meme Coin</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Your tweet video as full-screen background */
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -2;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(10,10,30,0.8));
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5rem;
+            text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+            animation: glow 2s infinite alternate;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin: 60px 0 20px;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #00ffcc, #ff00ff);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(0,255,255,0.5);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255,0,255,0.8);
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .roadmap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .roadmap-item {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(0,255,255,0.3);
+            transition: transform 0.3s;
+        }
+
+        .roadmap-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            font-size: 3rem;
+            color: #fff;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #00ffcc;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #00ffcc; }
+            to { text-shadow: 0 0 40px #ff00ff; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Animated Rockets */
+        .rocket {
+            position: fixed;
+            font-size: 4rem;
+            pointer-events: none;
+            z-index: 1;
+            animation: fly linear forwards;
+            opacity: 0.8;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Particles */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-<div class="container">
 
-  <img src="logo.png" alt="$H2GX Logo" class="logo">
+    <!-- Your grinding clip background -->
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="https://video.twimg.com/amplify_video/1999731421670260738/vid/avc1/320x422/kTe7NSN9hBH1BCG6.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
 
-  <h1>$H2GX ⚒️ BLUE COLLAR RAID SQUAD</h1>
-  <h2>Live Gaming × Live Pumping × Live Interactions</h2>
+    <div class="overlay"></div>
+    <div id="particles-js"></div>
 
-  <p class="slowsteady">SLOW BUT STEADY GROWTH — WHALES NOT WELCOME</p>
+    <header>
+        <h1>$H2GX</h1>
+        <p>Fresh on pump.fun • Still in Bonding Curve • Early Grind Phase 🚀</p>
+        <p style="font-size: 1.4rem; max-width: 800px; margin: 20px auto;">The slow and steady meme coin built by the community. Real growth takes time – join the family now while it's early.</p>
+        <a href="#" class="btn">Buy on pump.fun</a> <!-- REPLACE WITH YOUR PUMP.FUN LINK WHEN READY -->
+        <a href="#roadmap" class="btn">View 5-Year Roadmap</a>
+    </header>
 
-  <p style="font-size:25px;line-height:1.6">
-    Blue-collar, community-driven to the core.<br>
-    Whales that try to pump & dump will be called out on stream and shamed forever.<br>
-    Come join the game, squad, and the $H2GX movement — LIVE.
-  </p>
+    <section id="about">
+        <h2>About $H2GX</h2>
+        <p>$H2GX is live on pump.fun and grinding through the bonding curve. This is the earliest phase – built for real, organic community growth on X, Twitch, and Telegram.</p>
+        <p>No rush. No hype scams. Just steady building with the H2GX family. We're here for the long haul.</p>
+        <p><strong>Current Status:</strong> Bonding Curve • Community-Driven • Slow and Steady</p>
+    </section>
 
-  <div class="ca">CA:<br><strong>H2GXSoLoTQo4VZyR4E3B8K1f3Z6u5Yb6g2pXv7vQ4qP</strong></div>
-  <button onclick="navigator.clipboard.writeText('H2GXSoLoTQo4VZyR4E3B8K1f3Z6u5Yb6g2pXv7vQ4qP')">COPY CA & LOCK IN</button>
+    <section id="roadmap">
+        <h2>5-Year Roadmap</h2>
+        <p style="max-width: 900px; margin: 0 auto 40px; font-style: italic;">Slow and steady building. Real community growth on X, Twitch, and Telegram. Built to last the test of time.</p>
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <h3>Year 1 (2025–2026)<br>Foundation & Organic Growth</h3>
+                <p>Live on pump.fun ✅<br>Grind through bonding curve to Raydium<br>Real community growth on X, Twitch, and Telegram<br>Engagement 3–5 days a week: memes, raids, streams, voice chats<br>Consistent small giveaways & holder rewards<br>Community-driven burns<br>Goal: Graduate the curve together & build a loyal H2GX family</p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Year 2 (2026–2027)<br>Deepen Roots & Add Value</h3>
+                <p>Simple staking rewards<br>Twitch holder perks (emotes, badges)<br>Steady growth through authentic content<br>Basic merch drop<br>More community burns<br>Goal: Strengthen trust and retention</p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Year 3 (2027–2028)<br>Expand Carefully – Community & Content Focus</h3>
+                <p>Grow exclusive holder-only content (private streams, Q&As)<br>Bigger community events: gaming nights, tournaments, watch parties<br>Deeper Twitch integration (overlays, channel points)<br>Simple gamer utilities (holder-only game/skin giveaways)<br>Goal: Reward long-term holders with real, fun perks</p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Year 4 (2028–2029)<br>Sustainable Growth & Giving Back</h3>
+                <p>Global community expansion<br>Charity streams and initiatives<br>Holder dashboard improvements<br>Regular transparency & AMAs<br>Goal: Become the most genuine project</p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Year 5 (2029–2030)<br>Legacy Status – Built Different</h3>
+                <p>Strong, stable market cap from years of trust<br>Full ecosystem: staking, merch, charity, exclusive holder perks<br>Proven survivor in the meme coin space<br>The coin that grinded and won<br>Goal: Be the one they say "did it right"</p>
+            </div>
+        </div>
+    </section>
 
-  <h2 style="margin:70px 0 40px">5-Year War Plan</h2>
+    <section id="socials">
+        <h2>Connect With Us</h2>
+        <div class="socials">
+            <a href="https://www.twitch.tv/h2gx_562" target="_blank"><i class="fab fa-twitch social-icon"></i></a>
+            <a href="https://t.me/+dWDlwISnt24wMWFh" target="_blank"><i class="fab fa-telegram-plane social-icon"></i></a>
+            <a href="https://www.facebook.com/share/1A6niQezAp/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook social-icon"></i></a>
+            <a href="https://youtube.com/@hustleholixgamingent" target="_blank"><i class="fab fa-youtube social-icon"></i></a>
+            <a href="https://x.com/h2gamingx" target="_blank"><i class="fab fa-twitter social-icon"></i></a>
+        </div>
+    </section>
 
-  <div class="phase"><h3>Phase 1 – LAUNCHED (December 2025) </h3><p>→ Live on Pump.fun right now<br>→ Consistent raids every stream<br>→ Top 10% volume within first 90 days purely from streaming power<br>→ Zero whales allowed — we grow slow, steady, and together</p></div>
+    <footer>
+        &copy; 2025 $H2GX | All rights reserved. Not financial advice – DYOR.
+    </footer>
 
-  <div class="phase"><h3>Phase 2 – Build the Army (2025–2026)</h3><p>→ Grow to 5,000+ diamond-hand holders<br>→ 3–5 live gaming + pumping streams per week<br>→ Weekly “Holder Takeover Night” — you go live, we raid with 1k+ viewers<br>→ Free custom $H2GX overlays, emotes, alerts dropped at every 1k holders</p></div>
+    <!-- Particles + Rockets -->
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                color: { value: ["#00ffcc", "#ff00ff", "#ffffff"] },
+                shape: { type: ["circle", "edge", "triangle"] },
+                opacity: { value: 0.6, random: true },
+                size: { value: 4, random: true },
+                line_linked: { enable: true, distance: 120, color: "#ff00ff", opacity: 0.3, width: 1 },
+                move: { enable: true, speed: 3, direction: "top", straight: false }
+            },
+            interactivity: {
+                events: { onhover: { enable: true, mode: "repulse" } }
+            }
+        });
 
-  <div class="phase"><h3>Phase 3 – Raydium Lock-In (2026–2027)</h3><p>→ Climb into Top 20 on Pump.fun with real volume<br>→ Every donation/sub/bit → community wallet<br>→ Weekly live buy & burn on stream (watch supply drop in real time)<br>→ Raydium listing paid 100% by the squad</p></div>
+        function createRocket() {
+            const rocket = document.createElement('div');
+            rocket.classList.add('rocket');
+            rocket.innerHTML = '🚀';
+            rocket.style.left = Math.random() * 100 + 'vw';
+            rocket.style.animationDuration = (Math.random() * 5 + 8) + 's';
+            rocket.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(rocket);
 
-  <div class="phase"><h3>Phase 4 – CEX Domination (2027–2028)</h3><p>→ Listings on MEXC, Gate.io, Bybit, etc.<br>→ Free giveaways & exclusive merch drops to the Top 100 HODLers<br>→ Stream revenue keeps funding buybacks & burns</p></div>
+            setTimeout(() => {
+                rocket.remove();
+            }, 15000);
+        }
 
-  <div class="phase"><h3>Phase 5 – Legacy Money (2028–2030)</h3><p>→ Multi-million dollar community treasury<br>→ Annual all-expenses-paid $H2GX LAN party / meet-up for the entire squad<br>→ We keep gaming, raiding, and hanging out together for life — just with generational wealth in our wallets</p></div>
-
-  <h2 style="margin-top:70px">Jump In the Raid</h2>
-  <a href="https://t.me/HustleHolixGrindRoom" target="_blank"><button>TELEGRAM RAID ROOM</button></a><br>
-  <a href="https://www.twitch.tv/h2gx_562" target="_blank"><button>TWITCH – LIVE WITH THE SQUAD</button></a><br>
-  <a href="https://youtube.com/@hustleholixgamingent" target="_blank"><button>YOUTUBE</button></a><br>
-  <a href="https://www.facebook.com/share/14HATPvRkaX/?mibextid=wwXIfr" target="_blank"><button>FACEBOOK</button></a><br>
-  <a href="https://x.com/h2gamingx" target="_blank"><button>X / TWITTER</button></a><br>
-  <a href="https://www.instagram.com/hustleholixgaming" target="_blank"><button>INSTAGRAM</button></a><br>
-  <a href="https://www.tiktok.com/@hustle.holix.gaming" target="_blank"><button>TIKTOK</button></a>
-
-  <p style="margin:120px 0 50px;font-size:24px;line-height:1.9">
-    Clock in. Frag with the boys. Pump the chart slow and steady.<br>
-    Five years from now we’re throwing the biggest $H2GX LAN party the world has ever seen.<br><br>
-    Blue collar today. Legacy money tomorrow.<br>
-    Welcome to the squad, family ⚒️
-  </p>
-</div>
-
-<script>
-  // Scroll animation — super smooth & lightweight
-  const phases = document.querySelectorAll('.phase');
-  const options = { threshold: 0.2 };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, options);
-
-  phases.forEach(phase => observer.observe(phase));
-</script>
+        setInterval(createRocket, 2000);
+        for (let i = 0; i < 5; i++) {
+            setTimeout(createRocket, i * 1000);
+        }
+    </script>
 </body>
 </html>

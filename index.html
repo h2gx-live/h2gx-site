@@ -166,4 +166,125 @@
 
         @media (max-width: 768px) {
             h1 { font-size: 3.5rem; }
-            header { padding​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+            header { padding: 60px 20px 40px; }
+            .highlight { font-size: 1.5rem; }
+            /* Hide heavy animations on mobile */
+            #particles-js, .rocket { display: none !important; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="https://video.twimg.com/amplify_video/1999750986752036865/vid/avc1/320x404/bYCu-P8oAA8KcIz.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <div class="overlay"></div>
+
+    <!-- Particles container (hidden on mobile) -->
+    <div id="particles-js"></div>
+
+    <header>
+        <!-- Upload your logo as logo.png -->
+        <img src="logo.png" alt="Hustle Holix Gaming Logo" class="logo">
+
+        <h1>$H2GX</h1>
+        <p>Fresh on pump.fun • Still in Bonding Curve • Early Grind Phase 🚀</p>
+        <p style="font-size: 1.4rem; max-width: 800px; margin: 20px auto;">The slow and steady meme coin built by the community. Real growth takes time – join the family now while it's early.</p>
+        <p class="highlight">Whales are NOT allowed</p>
+        <p class="highlight">This is a SLOW and STEADY GRIND TO THE TOP!!!</p>
+        <a href="https://pump.fun/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank" class="btn">Buy $H2GX on pump.fun</a>
+        <a href="#roadmap" class="btn">View 5-Year Roadmap</a>
+    </header>
+
+    <section id="about">
+        <h2>About $H2GX</h2>
+        <p>$H2GX is live on pump.fun and grinding through the bonding curve. This is the earliest phase – built for real, organic community growth on X, Twitch, and Telegram.</p>
+        <p>No rush. No hype scams. Just steady building with the H2GX family. We're here for the long haul.</p>
+    </section>
+
+    <section id="ca">
+        <h2>Contract Address (CA)</h2>
+        <div class="ca-box">
+            <strong>BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump</strong><br><br>
+            <small>Copy and add to your wallet – DYOR, trade safe!</small>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <h2>5-Year Roadmap</h2>
+        <p style="max-width: 900px; margin: 0 auto 40px; font-style: italic;">Slow and steady building. Real community growth on X, Twitch, and Telegram. Built to last the test of time.</p>
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <h3>Year 1 (2025–2026)<br>Foundation & Organic Growth</h3>
+                <p>Live on pump.fun ✅<br>Real community growth on X, Twitch, and Telegram<br>Engagement 3–5 days a week: memes, raids, streams, voice chats<br>Consistent small giveaways & holder rewards<br>Community-driven burns<br>Goal: Build a loyal H2GX family – no whales, just grinders</p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Year 2 (2026–2027)<br>Deepen Roots & Raydium Graduation</h3>
+                <p>Grind through bonding curve to Raydium<br>Simple staking rewards<br>Twitch holder perks (emotes, badges)<br>Steady growth through authentic content<br>Basic merch drop<br>More community burns<br>Goal: Graduate together & strengthen trust</p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Year 3 (2027–2028)<br>Expand Carefully – Community & Content Focus</h3>
+                <p>Grow exclusive holder-only content (private streams, Q&As)<br>Bigger community events: gaming nights, tournaments, watch parties<br>Deeper Twitch integration (overlays, channel points)<br>Simple gamer utilities (holder-only game/skin giveaways)<br>Goal: Reward long-term holders with real, fun perks</p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Year 4 (2028–2029)<br>Sustainable Growth & Giving Back</h3>
+                <p>Global community expansion<br>Charity streams and initiatives<br>Holder dashboard improvements<br>Regular transparency & AMAs<br>Goal: Become the most genuine project</p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Year 5 (2029–2030)<br>Legacy Status – Built Different</h3>
+                <p>Strong, stable market cap from years of trust<br>Full ecosystem: staking, merch, charity, exclusive holder perks<br>Proven survivor in the meme coin space<br>The coin that grinded and won<br>Goal: Be the one they say "did it right"</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="socials">
+        <h2>Connect With Us</h2>
+        <div class="socials">
+            <a href="https://www.twitch.tv/h2gx_562" target="_blank"><i class="fab fa-twitch social-icon"></i></a>
+            <a href="https://t.me/+dWDlwISnt24wMWFh" target="_blank"><i class="fab fa-telegram-plane social-icon"></i></a>
+            <a href="https://www.facebook.com/share/1A6niQezAp/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook social-icon"></i></a>
+            <a href="https://youtube.com/@hustleholixgamingent" target="_blank"><i class="fab fa-youtube social-icon"></i></a>
+            <a href="https://x.com/h2gamingx" target="_blank"><i class="fab fa-twitter social-icon"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 $H2GX | All rights reserved. Not financial advice – DYOR.
+    </footer>
+
+    <!-- Animations only on desktop -->
+    <script>
+        if (window.innerWidth > 768) {
+            particlesJS("particles-js", {
+                particles: {
+                    number: { value: 60 },
+                    color: { value: ["#00ffcc", "#ff00ff", "#ffffff"] },
+                    shape: { type: ["circle", "edge"] },
+                    opacity: { value: 0.6, random: true },
+                    size: { value: 4, random: true },
+                    line_linked: { enable: true, distance: 120, color: "#ff00ff", opacity: 0.3, width: 1 },
+                    move: { enable: true, speed: 2, direction: "top" }
+                },
+                interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }
+            });
+
+            function createRocket() {
+                const rocket = document.createElement('div');
+                rocket.classList.add('rocket');
+                rocket.innerHTML = '🚀';
+                rocket.style.left = Math.random() * 100 + 'vw';
+                rocket.style.animationDuration = (Math.random() * 5 + 8) + 's';
+                document.body.appendChild(rocket);
+                setTimeout(() => rocket.remove(), 15000);
+            }
+
+            setInterval(createRocket, 3000);
+            for (let i = 0; i < 4; i++) setTimeout(createRocket, i * 1000);
+        }
+    </script>
+</body>
+</html>

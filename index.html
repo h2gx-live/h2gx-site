@@ -102,4 +102,95 @@
         }
 
         .roadmap {
-            display: flex​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .roadmap-item {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(0,255,255,0.3);
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .social-icon {
+            font-size: 3rem;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #00ffcc;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #00ffcc; }
+            to { text-shadow: 0 0 40px #ff00ff; }
+        }
+
+        .rocket {
+            position: fixed;
+            font-size: 4rem;
+            pointer-events: none;
+            z-index: 1;
+            animation: fly linear forwards;
+            opacity: 0.8;
+        }
+
+        @keyframes fly {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            20% { opacity: 0.8; }
+            100% { transform: translateY(-100px) rotate(-45deg); opacity: 0; }
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            header { padding: 60px 20px 40px; }
+            .highlight { font-size: 1.5rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+    <!-- New court animation clip background -->
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="https://video.twimg.com/ext_tw_video/1999895410940968960/vid/avc1/720x900/5y1r3x9o4q0o6b8Z.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <div class="overlay"></div>
+    <div id="particles-js"></div>
+
+    <header>
+        <!-- Upload your logo as logo.png -->
+        <img src="logo.png" alt="Hustle Holix Gaming Logo" class="logo">
+
+        <h1>$H2GX</h1>
+        <p>Fresh on pump.fun • Still in Bonding Curve • Early Grind Phase 🚀</p>
+        <p style="font-size: 1.4rem; max-width: 800px; margin: 20px auto;">The slow and steady meme coin built by the community. Real growth takes time – join the family now while it's early.</p>
+        <p class="highlight">Whales are NOT allowed</p>
+        <p class="highlight">This is a SLOW and STEADY GRIND TO THE TOP!!!</p>
+        <a href="https://pump.fun/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank" class="btn">Buy $H2GX on pump.fun</a>
+        <a href="#roadmap" class="btn">View 5-Year​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​

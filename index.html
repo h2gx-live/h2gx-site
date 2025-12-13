@@ -69,4 +69,141 @@
         .btn {
             display: inline-block;
             padding: 15px 40px;
-           ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+            background: linear-gradient(45deg, #00ffcc, #ff00ff);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(0,255,255,0.5);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255,0,255,0.8);
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .roadmap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .roadmap-item {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(0,255,255,0.3);
+            transition: transform 0.3s;
+        }
+
+        .roadmap-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            font-size: 3rem;
+            color: #fff;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #00ffcc;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #00ffcc; }
+            to { text-shadow: 0 0 40px #ff00ff; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Animated Rockets */
+        .rocket {
+            position: fixed;
+            font-size: 4rem;
+            pointer-events: none;
+            z-index: 1;
+            animation: fly linear forwards;
+            opacity: 0.8;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+    <!-- Latest grinding clip from your X post -->
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="https://video.twimg.com/amplify_video/1999750986752036865/vid/avc1/320x404/bYCu-P8oAA8vKcIz.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <div class="overlay"></div>
+    <div id="particles-js"></div>
+
+    <header>
+        <h1>$H2GX</h1>
+        <p>Fresh on pump.fun • Still in Bonding Curve • Early Grind Phase 🚀</p>
+        <p style="font-size: 1.4rem; max-width: 800px; margin: 20px auto;">The slow and steady meme coin built by the community. Real growth takes time – join the family now while it's early.</p>
+        <a href="https://pump.fun/H2GX" target="_blank" class="btn">Buy $H2GX on pump.fun</a>
+        <a href="#roadmap" class="btn">View 5-Year Roadmap</a>
+    </header>
+
+    <section id="about">
+        <h2>About $H2GX</h2>
+        <p>$H2GX is live on pump.fun and grinding through the bonding curve. This is the earliest phase – built for real, organic community growth on X, Twitch, and Telegram.</p>
+        <p>No rush. No hype scams. Just steady building with the H2GX family. We're here for the long haul.</p>
+        <p><strong>Current Status:</strong> Bonding Curve • Community-Driven • Slow and Steady</p>
+    </section>
+
+    <section id="roadmap">
+        <h2>5-Year Roadmap</h2>
+        <p style="max-width: 900px; margin: 0 auto 40px; font-style: italic;">Slow and steady building. Real community growth on X, Twitch, and Telegram.​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​

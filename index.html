@@ -141,7 +141,6 @@
             to { text-shadow: 0 0 40px #ff00ff; }
         }
 
-        /* Rocket animation */
         .rocket {
             position: fixed;
             font-size: 4rem;
@@ -168,8 +167,6 @@
             h1 { font-size: 3.5rem; }
             header { padding: 60px 20px 40px; }
             .highlight { font-size: 1.5rem; }
-            /* Hide heavy animations on mobile */
-            #particles-js, .rocket { display: none !important; }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -183,8 +180,6 @@
     </video>
 
     <div class="overlay"></div>
-
-    <!-- Particles container (hidden on mobile) -->
     <div id="particles-js"></div>
 
     <header>
@@ -256,35 +251,34 @@
         &copy; 2025 $H2GX | All rights reserved. Not financial advice – DYOR.
     </footer>
 
-    <!-- Animations only on desktop -->
     <script>
-        if (window.innerWidth > 768) {
-            particlesJS("particles-js", {
-                particles: {
-                    number: { value: 60 },
-                    color: { value: ["#00ffcc", "#ff00ff", "#ffffff"] },
-                    shape: { type: ["circle", "edge"] },
-                    opacity: { value: 0.6, random: true },
-                    size: { value: 4, random: true },
-                    line_linked: { enable: true, distance: 120, color: "#ff00ff", opacity: 0.3, width: 1 },
-                    move: { enable: true, speed: 2, direction: "top" }
-                },
-                interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }
-            });
-
-            function createRocket() {
-                const rocket = document.createElement('div');
-                rocket.classList.add('rocket');
-                rocket.innerHTML = '🚀';
-                rocket.style.left = Math.random() * 100 + 'vw';
-                rocket.style.animationDuration = (Math.random() * 5 + 8) + 's';
-                document.body.appendChild(rocket);
-                setTimeout(() => rocket.remove(), 15000);
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 40 }, /* Light for mobile */
+                color: { value: ["#00ffcc", "#ff00ff", "#ffffff"] },
+                shape: { type: ["circle"] },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false }, /* Turned off lines for performance */
+                move: { enable: true, speed: 1.5, direction: "top" }
+            },
+            interactivity: {
+                events: { onhover: { enable: false } } /* No hover on mobile */
             }
+        });
 
-            setInterval(createRocket, 3000);
-            for (let i = 0; i < 4; i++) setTimeout(createRocket, i * 1000);
+        function createRocket() {
+            const rocket = document.createElement('div');
+            rocket.classList.add('rocket');
+            rocket.innerHTML = '🚀';
+            rocket.style.left = Math.random() * 100 + 'vw';
+            rocket.style.animationDuration = (Math.random() * 6 + 10) + 's'; /* Slower */
+            document.body.appendChild(rocket);
+            setTimeout(() => rocket.remove(), 16000);
         }
+
+        setInterval(createRocket, 5000); /* Less frequent */
+        for (let i = 0; i < 2; i++) setTimeout(createRocket, i * 2000); /* Fewer at start */
     </script>
 </body>
 </html>

@@ -5,24 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$H2GX - Hustle Holix Gaming</title>
     <style>
-        body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; color: #fff; overflow-x: hidden; }
-        #bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-        canvas { position: fixed; top: 0; left: 0; z-index: 0; opacity: 0.4; }
-        .top-logo { text-align: center; padding: 40px 20px 20px; background: rgba(0, 0, 0, 0.5); }
-        .top-logo img { max-width: 600px; width: 95%; height: auto; }
-        header { text-align: center; padding: 40px 20px 60px; background: rgba(0, 0, 0, 0.6); border-bottom: 2px solid #00ff41; }
-        h1 { font-size: 3.8em; margin: 10px 0; text-shadow: 0 0 15px #00ff41; }
-        h2 { font-size: 2.2em; text-align: center; margin: 40px 0 20px; text-shadow: 0 0 10px #00ff41; }
-        section { max-width: 1000px; margin: 0 auto 40px; padding: 30px; background: rgba(0, 0, 0, 0.8); border-radius: 15px; border: 1px solid #00ff41; }
-        .roadmap { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .year { flex: 1 1 280px; padding: 20px; background: rgba(0, 100, 65, 0.85); border-radius: 10px; border: 1px solid #00ff41; }
-        .buy-btn { display: block; width: 300px; margin: 30px auto; padding: 18px; background: #00ff41; color: #000; font-weight: bold; font-size: 1.5em; text-align: center; text-decoration: none; border-radius: 15px; box-shadow: 0 0 20px #00ff41; }
-        .ca { word-break: break-all; font-family: monospace; background: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; font-size: 1.2em; }
-        footer { text-align: center; padding: 40px; background: rgba(0, 0, 0, 0.9); }
-        .socials { text-align: center; }
-        .socials a { color: #00ff41; margin: 15px; font-size: 1.8em; text-decoration: none; font-weight: bold; display: block; }
-        .socials a:hover { text-shadow: 0 0 15px #00ff41; }
-        @media (min-width: 768px) { .socials a { display: inline-block; } }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial Black', 'Arial', sans-serif;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
+        }
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Minimal tint for bright video */
+            z-index: -1;
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            opacity: 0.6;
+        }
+        .top-logo {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+        .top-logo img {
+            max-width: 700px;
+            width: 90%;
+            height: auto;
+            filter: drop-shadow(0 0 20px #00ff41);
+        }
+        header {
+            text-align: center;
+            padding: 30px 20px 70px;
+        }
+        h1 {
+            font-size: 5em;
+            margin: 0;
+            text-shadow: 0 0 20px #00ff41, 0 0 40px #00ff41;
+            color: #00ff41;
+        }
+        header p {
+            font-size: 1.8em;
+            margin: 10px 0;
+            text-shadow: 0 0 10px #000;
+        }
+        h2 {
+            font-size: 3em;
+            text-align: center;
+            margin: 40px 0 30px;
+            text-shadow: 0 0 15px #00ff41;
+            color: #00ff41;
+        }
+        section {
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            border: 3px solid #00ff41;
+            box-shadow: 0 0 30px #00ff41;
+        }
+        p {
+            font-size: 1.4em;
+            line-height: 1.6;
+        }
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .year {
+            padding: 25px;
+            background: rgba(0, 50, 20, 0.8);
+            border-radius: 15px;
+            border: 2px solid #00ff41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+        }
+        .year h3 {
+            font-size: 2em;
+            color: #00ff41;
+            text-shadow: 0 0 10px #00ff41;
+        }
+        ul {
+            font-size: 1.3em;
+            line-height: 1.8;
+        }
+        .buy-btn {
+            display: block;
+            width: 400px;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 25px;
+            background: linear-gradient(#00ff41, #00cc33);
+            color: #000;
+            font-weight: bold;
+            font-size: 2em;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 20px;
+            box-shadow: 0 0 30px #00ff41;
+            transition: transform 0.3s;
+        }
+        .buy-btn:hover {
+            transform: scale(1.05);
+        }
+        .ca {
+            font-size: 1.5em;
+            word-break: break-all;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+            font-family: monospace;
+            box-shadow: 0 0 20px #00ff41;
+        }
+        .socials {
+            text-align: center;
+            font-size: 1.8em;
+        }
+        .socials a {
+            display: block;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 255, 65, 0.2);
+            color: #00ff41;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: 0 0 20px #00ff41;
+            transition: transform 0.3s;
+        }
+        .socials a:hover {
+            transform: scale(1.05);
+            background: rgba(0, 255, 65, 0.4);
+        }
+        @media (min-width: 768px) {
+            .socials a {
+                display: inline-block;
+                width: 45%;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 60px;
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.9);
+            text-shadow: 0 0 10px #00ff41;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +175,7 @@
 <video id="bg-video" autoplay muted loop playsinline>
     <source src="https://video.twimg.com/amplify_video/1999895416809123842/vid/avc1/484x270/_kp46pGjTqmETOU0.mp4" type="video/mp4">
 </video>
+<div class="overlay"></div>
 
 <canvas id="particles"></canvas>
 
@@ -41,7 +187,7 @@
     <h1>$H2GX</h1>
     <p>Hustle Holix Gaming – Grind Hard, Win Steady</p>
     <p>NBA 2K Streams • Community Grinders • No Whales, Just Real HODLers</p>
-    <a href="https://pump.fun/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank" class="buy-btn">Buy $H2GX on Pump.fun</a>
+    <a href="https://pump.fun/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank" class="buy-btn">BUY $H2GX ON PUMP.FUN</a>
 </header>
 
 <section>
@@ -60,8 +206,7 @@
 
 <section>
     <h2>Realistic 5-Year Roadmap</h2>
-    <p style="text-align:center; margin-bottom:30px;"><strong>Community-First • Slow and Steady Growth • Simple, Doable Steps</strong></p>
-    <p style="text-align:center; margin-bottom:40px;">We keep it real and simple. No big promises, no rush. $H2GX is built for real HODLers only – no whales, no dumpers, just grinders who stack bags and stick around through the daily streams, chats, and small wins that add up over time. Every goal is something we can actually hit if we just stay consistent.</p>
+    <p style="text-align:center; font-size:1.5em;"><strong>Community-First • Slow and Steady Growth • Simple, Doable Steps</strong></p>
     <div class="roadmap">
         <div class="year">
             <h3>Year 1 (2026)</h3>
@@ -69,14 +214,14 @@
                 <li>Finish the pump.fun bonding curve and get to Raydium together</li>
                 <li>Grow slowly to 1–3K real holders just from regular NBA 2K streams and community shares</li>
                 <li>Set up a basic $H2GX tip command on Twitch (anyone in the community can help test it)</li>
-                <li>Run small giveaways and fun contests during streams (like best clip submissions, prediction games, or chat trivia for tiny $H2GX prizes)</li>
+                <li>Run small giveaways and fun contests during streams</li>
             </ul>
         </div>
         <div class="year">
             <h3>Year 2 (2027)</h3>
             <ul>
                 <li>Keep growing steadily to 4–8K holders through daily/weekly streams and organic raids</li>
-                <li>Create and drop community merch like shirts, beanies, hats, stickers, etc. (designed together, simple and affordable)</li>
+                <li>Create and drop community merch like shirts, beanies, hats, stickers</li>
                 <li>Create and share simple community memes and clip highlights</li>
             </ul>
         </div>
@@ -92,9 +237,9 @@
         <div class="year">
             <h3>Year 4 (2029)</h3>
             <ul>
-                <li>Let holders vote on small ideas (like stream themes, giveaway rules, or simple perks)</li>
+                <li>Let holders vote on small ideas (stream themes, giveaway rules, perks)</li>
                 <li>Give shoutouts and small rewards to long-time community members</li>
-                <li>Keep improving the Twitch channel together based on what people ask for</li>
+                <li>Keep improving the Twitch channel together</li>
                 <li>Celebrate the people who have stuck around since the beginning</li>
             </ul>
         </div>
@@ -107,7 +252,7 @@
             </ul>
         </div>
     </div>
-    <p style="text-align:center; margin-top:40px;">This roadmap isn’t about hitting huge numbers fast.<br>It’s for the real HODLers: no whales allowed, just everyday grinders who show up, stream, chat, support each other, and let the community grow naturally.<br>Small steps, every day. That’s how we win long-term.</p>
+    <p style="text-align:center; font-size:1.5em; margin-top:50px;">This roadmap isn’t about hitting huge numbers fast.<br>It’s for the real HODLers: no whales allowed, just everyday grinders who show up, stream, chat, support each other, and let the community grow naturally.<br>Small steps, every day. That’s how we win long-term.</p>
 </section>
 
 <section>
@@ -118,6 +263,8 @@
         <a href="https://www.twitch.tv/h2gx_562" target="_blank">Twitch (Live Streams)</a>
         <a href="https://youtube.com/@hustleholixgamingent" target="_blank">YouTube</a>
         <a href="https://www.facebook.com/hustleholixgaming" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/hustleholixgaming" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@hustle.holix.gaming" target="_blank">TikTok</a>
         <a href="https://pump.fun/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank">Pump.fun (Chart/Buy)</a>
     </div>
 </section>
@@ -127,22 +274,22 @@
 </footer>
 
 <script>
-// Subtle green particles
+// Brighter green particles
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let particles = [];
-const numParticles = 60;
+const numParticles = 80;
 
 class Particle {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 3 + 1;
-        this.speedX = Math.random() * 0.4 - 0.2;
-        this.speedY = Math.random() * 0.4 - 0.2;
+        this.size = Math.random() * 4 + 2;
+        this.speedX = Math.random() * 0.6 - 0.3;
+        this.speedY = Math.random() * 0.6 - 0.3;
     }
     update() {
         this.x += this.speedX;
@@ -151,7 +298,7 @@ class Particle {
         if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
     }
     draw() {
-        ctx.fillStyle = 'rgba(0, 255, 65, 0.7)';
+        ctx.fillStyle = 'rgba(0, 255, 65, 0.8)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();

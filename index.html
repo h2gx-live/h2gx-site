@@ -12,23 +12,37 @@
       margin: 0; 
       padding: 0; 
     }
-    .container { 
-      max-width: 1100px; 
-      margin: 0 auto; 
-      padding: 40px 20px; 
-      position: relative;
-      z-index: 2;
+    header {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      background: rgba(2, 6, 23, 0.95); 
+      padding: 15px 40px; 
+      z-index: 100; 
+      display: flex; 
+      align-items: center; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+    header img {
+      height: 70px; 
+      margin-right: 20px;
+    }
+    header h1 {
+      color: #22c55e; 
+      margin: 0; 
+      font-size: 2.2em;
     }
     .hero {
       position: relative; 
       width: 100%; 
       height: 100vh; 
       min-height: 700px;
-      background: url('bg.jpg') center/cover no-repeat fixed; /* Change 'holix-bg.jpg' to your uploaded image file name */
+      background: url('holix-bg.png.JPG') center/cover no-repeat fixed; /* Your uploaded background */
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 60px;
+      margin-top: 100px; /* Offset for fixed header */
     }
     .hero-overlay {
       position: absolute; 
@@ -51,6 +65,16 @@
       font-size: 2.2em; 
       margin: 20px 0 0; 
       text-shadow: 0 0 20px #000;
+    }
+    .container { 
+      max-width: 1100px; 
+      margin: 0 auto; 
+      padding: 60px 20px; 
+      background: rgba(2, 6, 23, 0.9); 
+      border-radius: 16px; 
+      margin-top: -100px; 
+      position: relative; 
+      z-index: 2;
     }
     h2 { 
       font-size: 2.8em; 
@@ -117,6 +141,14 @@
   </style>
 </head>
 <body>
+
+  <!-- Fixed Header with Logo -->
+  <header>
+    <a href="https://h2gx-live.github.io/h2gx-site/" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="holix-logo.png.JPG" alt="$H2GX Logo">
+      <h1>$H2GX</h1>
+    </a>
+  </header>
 
   <!-- Full-page Hero Background -->
   <div class="hero">

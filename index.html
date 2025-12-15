@@ -1,335 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$H2GX - Hustle Holix Gaming</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial Black', 'Arial', sans-serif;
-            color: #fff;
-            background: #000;
-            overflow-x: hidden;
-        }
-        #bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Minimal tint for bright video */
-            z-index: -1;
-        }
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            opacity: 0.6;
-        }
-        .top-logo {
-            text-align: center;
-            padding: 50px 20px 30px;
-        }
-        .top-logo img {
-            max-width: 700px;
-            width: 90%;
-            height: auto;
-            filter: drop-shadow(0 0 20px #00ff41);
-        }
-        header {
-            text-align: center;
-            padding: 30px 20px 70px;
-        }
-        h1 {
-            font-size: 5em;
-            margin: 0;
-            text-shadow: 0 0 20px #00ff41, 0 0 40px #00ff41;
-            color: #00ff41;
-        }
-        header p {
-            font-size: 1.8em;
-            margin: 10px 0;
-            text-shadow: 0 0 10px #000;
-        }
-        h2 {
-            font-size: 3em;
-            text-align: center;
-            margin: 40px 0 30px;
-            text-shadow: 0 0 15px #00ff41;
-            color: #00ff41;
-        }
-        section {
-            max-width: 1100px;
-            margin: 0 auto 60px;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            border: 3px solid #00ff41;
-            box-shadow: 0 0 30px #00ff41;
-        }
-        p {
-            font-size: 1.4em;
-            line-height: 1.6;
-        }
-        .roadmap {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .year {
-            padding: 25px;
-            background: rgba(0, 50, 20, 0.8);
-            border-radius: 15px;
-            border: 2px solid #00ff41;
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
-        }
-        .year h3 {
-            font-size: 2em;
-            color: #00ff41;
-            text-shadow: 0 0 10px #00ff41;
-        }
-        ul {
-            font-size: 1.3em;
-            line-height: 1.8;
-        }
-        .buy-btn {
-            display: block;
-            width: 400px;
-            max-width: 90%;
-            margin: 40px auto;
-            padding: 25px;
-            background: linear-gradient(#00ff41, #00cc33);
-            color: #000;
-            font-weight: bold;
-            font-size: 2em;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 20px;
-            box-shadow: 0 0 30px #00ff41;
-            transition: transform 0.3s;
-        }
-        .buy-btn:hover {
-            transform: scale(1.05);
-        }
-        .ca {
-            font-size: 1.5em;
-            word-break: break-all;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 20px 0;
-            font-family: monospace;
-            box-shadow: 0 0 20px #00ff41;
-        }
-        .socials {
-            text-align: center;
-            font-size: 1.8em;
-        }
-        .socials a {
-            display: block;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(0, 255, 65, 0.2);
-            color: #00ff41;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 15px;
-            max-width: 600px;
-            box-shadow: 0 0 20px #00ff41;
-            transition: transform 0.3s;
-        }
-        .socials a:hover {
-            transform: scale(1.05);
-            background: rgba(0, 255, 65, 0.4);
-        }
-        @media (min-width: 768px) {
-            .socials a {
-                display: inline-block;
-                width: 45%;
-            }
-        }
-        footer {
-            text-align: center;
-            padding: 60px;
-            font-size: 1.5em;
-            background: rgba(0, 0, 0, 0.9);
-            text-shadow: 0 0 10px #00ff41;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$H2GX – Slow Wins</title>
+  <style>
+    body { background: #020617; color: #e2e8f0; font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    img { max-width: 100%; border-radius: 16px; }
+    a { text-decoration: none; }
+    .social-icons img { width: 40px; margin: 0 15px; filter: brightness(0) invert(1); }
+    .btn { display: inline-block; padding: 16px 40px; border-radius: 50px; font-weight: bold; font-size: 1.2em; margin: 10px; }
+    .btn-primary { background: #22c55e; color: white; }
+    .btn-secondary { background: transparent; color: #22c55e; border: 2px solid #22c55e; }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
+    .phase { background: #1e293b; padding: 30px; border-radius: 16px; text-align: center; }
+  </style>
 </head>
 <body>
 
-<video id="bg-video" autoplay muted loop playsinline>
-    <source src="https://video.twimg.com/amplify_video/1999895416809123842/vid/avc1/484x270/_kp46pGjTqmETOU0.mp4" type="video/mp4">
-</video>
-<div class="overlay"></div>
+  <div class="container">
 
-<canvas id="particles"></canvas>
+    <!-- Hero Image -->
+    <img src="YOUR_HOLIX_HERO_IMAGE_URL.jpg" alt="Holix the Turtle crossing the finish line with $H2GX">
 
-<div class="top-logo">
-    <img src="logo.png" alt="Hustle Holix Gaming Logo">
-</div>
+    <h1 style="font-size: 3em; text-align: center; margin: 40px 0; color: #22c55e;">Holix – The Legend of Slow Wins 🐢💚</h1>
 
-<header>
-    <h1>$H2GX</h1>
-    <p>Hustle Holix Gaming – Grind Hard, Win Steady</p>
-    <p>NBA 2K Streams • Community Grinders • No Whales, Just Real HODLers</p>
-    <a href="https://pump.fun/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank" class="buy-btn">BUY $H2GX ON PUMP.FUN</a>
-</header>
+    <p style="font-size: 1.3em; line-height: 1.9; text-align: center; max-width: 900px; margin: 0 auto 40px;">
+      Meet <strong>Holix</strong>, the unbreakable turtle who's been grinding since the first bear market. Cracked shell scarred from endless red candles, yellow hard hat tilted like he's seen every dip and never sold once.<br><br>
+      While the hare chases pumps, rides "rug" candlesticks into crashes, and gets pinned under massive dumps, Holix just keeps moving—one steady step at a time.<br><br>
+      He crosses every finish line waving the <strong>$H2GX</strong> flag, backed by a sign that reads <em>"Slow and Steady."</em> No hype. No rush. Just pure conviction.
+    </p>
 
-<section>
-    <h2>About $H2GX</h2>
-    <p>$H2GX is the community token for Hustle Holix Gaming – fueled by consistent NBA 2K live streams, real grind energy, and blue-collar gamers who build slow and steady.</p>
-    <p>Fair pump.fun launch, no whales allowed – just real HODLers stacking bags, grinding together, and building long-term community growth through genuine relationships.</p>
-    <p>We're not here for quick pumps. We're here for the long haul – supporting each other, growing together, and creating lasting connections one stream, one raid, one dub at a time. Just warming up!</p>
-</section>
+    <p style="font-size: 1.5em; text-align: center; font-weight: bold; color: #86efac; margin: 50px 0;">
+      $H2GX isn't about quick flips. It's for the real ones—the HODLers who outlast every rug, every crash, every panic sell.
+    </p>
 
-<section>
-    <h2>Token Info</h2>
-    <p>Contract Address (CA):</p>
-    <div class="ca">BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump</div>
-    <p>Fair launch on pump.fun – community-driven from day one.</p>
-</section>
+    <h2 style="font-size: 2.8em; text-align: center; color: #22c55e; margin: 40px 0;">
+      $H2GX – Slow Wins.
+    </h2>
 
-<section>
-    <h2>Realistic 5-Year Roadmap</h2>
-    <p style="text-align:center; font-size:1.5em;"><strong>Community-First • Slow and Steady Growth • Simple, Doable Steps</strong></p>
-    <div class="roadmap">
-        <div class="year">
-            <h3>Year 1 (2026)</h3>
-            <ul>
-                <li>Finish the pump.fun bonding curve and get to Raydium together</li>
-                <li>Grow slowly to 1–3K real holders just from regular NBA 2K streams and community shares</li>
-                <li>Set up a basic $H2GX tip command on Twitch (anyone in the community can help test it)</li>
-                <li>Run small giveaways and fun contests during streams</li>
-            </ul>
-        </div>
-        <div class="year">
-            <h3>Year 2 (2027)</h3>
-            <ul>
-                <li>Keep growing steadily to 4–8K holders through daily/weekly streams and organic raids</li>
-                <li>Create and drop community merch like shirts, beanies, hats, stickers</li>
-                <li>Create and share simple community memes and clip highlights</li>
-            </ul>
-        </div>
-        <div class="year">
-            <h3>Year 3 (2028)</h3>
-            <ul>
-                <li>Host casual community game nights on stream (open to all holders)</li>
-                <li>Run HODLers-only NBA 2K tournaments with $H2GX prizes via airdrops</li>
-                <li>Do a few feel-good charity streams picked by the group</li>
-                <li>Keep the community spaces active and welcoming</li>
-            </ul>
-        </div>
-        <div class="year">
-            <h3>Year 4 (2029)</h3>
-            <ul>
-                <li>Let holders vote on small ideas (stream themes, giveaway rules, perks)</li>
-                <li>Give shoutouts and small rewards to long-time community members</li>
-                <li>Keep improving the Twitch channel together</li>
-                <li>Celebrate the people who have stuck around since the beginning</li>
-            </ul>
-        </div>
-        <div class="year">
-            <h3>Year 5 (2030)</h3>
-            <ul>
-                <li>Still be here as a chill, active gaming community that’s grown naturally</li>
-                <li>Keep running regular streams, small events, and community giveaways</li>
-                <li>Look back at a solid group of real grinders who built this together, one day at a time</li>
-            </ul>
-        </div>
+    <p style="text-align: center; font-size: 1.3em; margin-bottom: 60px;">
+      Hustle hard. Hold harder. Win forever.
+    </p>
+
+    <!-- Social Links -->
+    <div style="text-align: center; margin: 50px 0;">
+      <a href="YOUR_X_TWITTER_LINK" target="_blank" class="social-icons"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png" alt="X"></a>
+      <a href="YOUR_TELEGRAM_LINK" target="_blank" class="social-icons"><img src="https://img.icons8.com/ios-filled/50/ffffff/telegram.png" alt="Telegram"></a>
+      <a href="YOUR_DEXSCREENER_LINK" target="_blank" class="social-icons"><img src="https://cryptologos.cc/logos/dexscreener-dexscreener-logo.png?v=026" alt="DexScreener"></a>
+      <a href="YOUR_CHART_LINK" target="_blank" class="social-icons"><img src="https://img.icons8.com/ios-filled/50/ffffff/line-chart.png" alt="Chart"></a>
     </div>
-    <p style="text-align:center; font-size:1.5em; margin-top:50px;">This roadmap isn’t about hitting huge numbers fast.<br>It’s for the real HODLers: no whales allowed, just everyday grinders who show up, stream, chat, support each other, and let the community grow naturally.<br>Small steps, every day. That’s how we win long-term.</p>
-</section>
 
-<section>
-    <h2>Community & Socials</h2>
-    <div class="socials">
-        <a href="https://x.com/h2gamingx" target="_blank">X (Twitter)</a>
-        <a href="https://t.me/HustleHolix" target="_blank">Telegram</a>
-        <a href="https://www.twitch.tv/h2gx_562" target="_blank">Twitch (Live Streams)</a>
-        <a href="https://youtube.com/@hustleholixgamingent" target="_blank">YouTube</a>
-        <a href="https://www.facebook.com/hustleholixgaming" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/hustleholixgaming" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@hustle.holix.gaming" target="_blank">TikTok</a>
-        <a href="https://pump.fun/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank">Pump.fun (Chart/Buy)</a>
+    <!-- CTA Buttons -->
+    <div style="text-align: center; margin: 50px 0;">
+      <a href="YOUR_BUY_LINK" class="btn btn-primary">Buy $H2GX</a>
+      <a href="YOUR_TELEGRAM_LINK" class="btn btn-secondary">Join Community</a>
     </div>
-</section>
 
-<footer>
-    <p>$H2GX - Hustle Holix Gaming • Slow & Steady Grinders • Built for the Real HODLers • 2025</p>
-</footer>
+    <!-- Roadmap -->
+    <h2 style="font-size: 2.8em; text-align: center; color: #22c55e; margin: 80px 0 40px;">Roadmap</h2>
+    <div class="roadmap-grid">
+      <div class="phase">
+        <h3 style="color: #22c55e; margin-bottom: 20px;">Phase 1 – Launch & Community</h3>
+        <p>Fair launch<br>Build Turtle Gang<br>Organic growth<br>Meme supremacy</p>
+      </div>
+      <div class="phase">
+        <h3 style="color: #22c55e; margin-bottom: 20px;">Phase 2 – Hold & Stack</h3>
+        <p>Listings<br>Marketing push<br>HODLer rewards<br>More memes</p>
+      </div>
+      <div class="phase">
+        <h3 style="color: #22c55e; margin-bottom: 20px;">Phase 3 – Slow Wins</h3>
+        <p>Moon together<br>Turtle takeover<br>Legacy status</p>
+      </div>
+    </div>
 
-<script>
-// Brighter green particles
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+    <p style="text-align: center; font-size: 1.1em; color: #94a3b8; margin-top: 60px;">
+      🐢🏁 #Holix #H2GX #TurtleGang #SlowAndSteady
+    </p>
 
-let particles = [];
-const numParticles = 80;
-
-class Particle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 4 + 2;
-        this.speedX = Math.random() * 0.6 - 0.3;
-        this.speedY = Math.random() * 0.6 - 0.3;
-    }
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
-        if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
-    }
-    draw() {
-        ctx.fillStyle = 'rgba(0, 255, 65, 0.8)';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-
-function init() {
-    particles = [];
-    for (let i = 0; i < numParticles; i++) {
-        particles.push(new Particle());
-    }
-}
-
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-    });
-    requestAnimationFrame(animate);
-}
-
-init();
-animate();
-
-window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    init();
-});
-</script>
+  </div>
 
 </body>
 </html>

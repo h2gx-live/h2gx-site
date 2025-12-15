@@ -5,71 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$H2GX – The Slow and Steady Grind</title>
   <style>
-    body { 
-      background: #020617; 
-      color: #e2e8f0; 
-      font-family: 'Arial', sans-serif; 
-      margin: 0; 
-      padding: 0; 
-    }
-    .hero {
-      position: relative; 
-      width: 100%; 
-      height: 100vh; 
-      background: url('hero.jpg') center/cover no-repeat fixed; /* Your uploaded image file name */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-overlay {
-      position: absolute; 
-      inset: 0; 
-      background: rgba(2, 6, 23, 0.75); 
-    }
-    .hero-text {
-      position: relative; 
-      z-index: 2; 
-      text-align: center; 
-      color: white;
-    }
-    .hero-text h1 {
-      font-size: 4.5em; 
-      color: #22c55e; 
-      text-shadow: 0 0 30px #000; 
-    }
-    .hero-text p {
-      font-size: 2.2em; 
-      text-shadow: 0 0 20px #000;
-    }
-    .container { 
-      max-width: 1100px; 
-      margin: 0 auto; 
-      padding: 60px 20px; 
-      background: rgba(2, 6, 23, 0.9);
-      border-radius: 16px;
-      margin-top: -100px; /* Overlap hero a bit */
-      position: relative;
-      z-index: 2;
-    }
-    /* Rest of styles from previous code */
-    h2 { font-size: 2.8em; text-align: center; color: #22c55e; margin: 60px 0 30px; }
-    p { font-size: 1.3em; line-height: 1.9; text-align: center; max-width: 900px; margin: 0 auto 40px; }
-    /* Add social/CTA/roadmap styles if needed from previous code */
+    body { margin: 0; padding: 0; background: #020617; color: #e2e8f0; font-family: Arial, sans-serif; }
+    .hero { width: 100%; height: 100vh; background: url('holix-bg.jpg') center/cover no-repeat fixed; display: flex; align-items: center; justify-content: center; position: relative; }
+    .overlay { position: absolute; inset: 0; background: rgba(2, 6, 23, 0.75); }
+    .hero-text { position: relative; z-index: 2; text-align: center; color: white; }
+    .hero-text h1 { font-size: 5em; color: #22c55e; text-shadow: 0 0 30px black; }
+    .hero-text p { font-size: 2.5em; text-shadow: 0 0 20px black; }
+    .content { max-width: 1100px; margin: -100px auto 0; padding: 60px; background: rgba(2, 6, 23, 0.9); border-radius: 16px; position: relative; z-index: 2; }
+    h1, h2 { text-align: center; color: #22c55e; }
+    p { font-size: 1.3em; line-height: 1.8; text-align: center; max-width: 900px; margin: 0 auto 40px; }
+    .social { text-align: center; margin: 60px 0; }
+    .social a { margin: 0 20px; }
+    .social img { width: 60px; filter: brightness(0) invert(1); }
+    .btn { padding: 18px 50px; background: #22c55e; color: white; border: none; border-radius: 50px; font-size: 1.4em; margin: 15px; cursor: pointer; }
+    .btn-secondary { background: transparent; border: 3px solid #22c55e; color: #22c55e; }
+    .roadmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .phase { background: #1e293b; padding: 40px; border-radius: 16px; text-align: center; }
   </style>
 </head>
 <body>
 
   <div class="hero">
-    <div class="hero-overlay"></div>
+    <div class="overlay"></div>
     <div class="hero-text">
       <h1>$H2GX</h1>
       <p>The Slow and Steady Grind 🐢🎮</p>
     </div>
   </div>
 
-  <div class="container">
-    <!-- Paste your full bio, roadmap, links, etc. here from previous code -->
-    <!-- (The text you have in README.md) -->
+  <div class="content">
+    <h1>Holix the Gaming Hustler 🐢💚</h1>
+
+    <p>Meet <strong>Holix the Gaming Hustler</strong> — a true gamer and diamond-handed HODLer grinding levels since the first bear market. Cracked shell from countless raids, yellow hard hat tilted, controller locked in — he’s built different.<br><br>
+    While hares chase hype and get rekt on rugs, Holix stays in the zone: farming wins, stacking green candles, HODLing through every boss fight.<br><br>
+    <strong>One win at a time. One green candle at a time.</strong></p>
+
+    <p style="font-size: 1.6em; font-weight: bold; color: #86efac;">
+      $H2GX is the token for gamers who grind — not gamble.<br>
+      <strong>No whales allowed.</strong> This is a fair launch for the Turtle Gang: real players, real holders, real slow-and-steady wins.
+    </p>
+
+    <h2>$H2GX – The Slow and Steady Grind</h2>
+
+    <p>Hustle hard. Hold harder. Level up forever.</p>
+
+    <div class="social">
+      <a href="https://www.twitch.tv/h2gx_562" target="_blank"><img src="https://img.icons8.com/color/100/twitch.png" alt="Twitch"></a>
+      <a href="https://x.com/h2gamingx" target="_blank"><img src="https://img.icons8.com/ios-filled/100/ffffff/twitterx.png" alt="X"></a>
+      <a href="https://t.me/HustleHolix" target="_blank"><img src="https://img.icons8.com/ios-filled/100/ffffff/telegram.png" alt="Telegram"></a>
+      <a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank"><img src="https://pump.fun/favicon.ico" alt="Pump.fun"></a>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" class="btn">Buy $H2GX</a>
+      <a href="https://t.me/HustleHolix" class="btn btn-secondary">Join the Grind</a>
+    </div>
+
+    <h2>5-Year Grind Roadmap</h2>
+    <div class="roadmap">
+      <div class="phase">
+        <h3>Year 1 – Launch & Build the Gang</h3>
+        <p>Fair launch on Pump.fun<br>Build core Turtle Gang community<br>Constant gaming streams & raids<br>Establish meme dominance<br>First major marketing push</p>
+      </div>
+      <div class="phase">
+        <h3>Year 2 – Level Up & Listings</h3>
+        <p>Major CEX listings<br>Gaming partnerships & collabs<br>HODLer rewards program launch<br>Epic meme campaigns<br>Community events & giveaways</p>
+      </div>
+      <div class="phase">
+        <h3>Year 3 – Stack & Scale</h3>
+        <p>Utility integrations (gaming/NFT drops)<br>Global community expansion<br>Exclusive gaming tournaments & prize pools<br>Top-tier influencer raids<br>Consistent green candle energy</p>
+      </div>
+      <div class="phase">
+        <h3>Year 4 – Dominate the Leaderboard</h3>
+        <p>Mass adoption phase<br>Gaming platform integrations<br>Merch<br>Online events & virtual conventions<br>Charity streams & real-world impact<br>Legacy status in meme culture</p>
+      </div>
+      <div class="phase">
+        <h3>Year 5 – Moon & Legacy</h3>
+        <p>Sustainable long-term growth & ecosystem maturity<br>Full gaming ecosystem live<br>Holix becomes iconic mascot<br>Turtle Gang takes over<br>Slow and steady wins forever</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 80px;">🐢🎮🔥 #HolixTheHustler #H2GX #SlowAndSteadyGrind #OneGreenCandleAtATime</p>
   </div>
 
 </body>

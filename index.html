@@ -5,79 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$H2GX – Slow Wins</title>
   <style>
-    body { background: #020617; color: #e2e8f0; font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-    img { max-width: 100%; border-radius: 16px; }
-    a { text-decoration: none; }
-    .social-icons img { width: 40px; margin: 0 15px; filter: brightness(0) invert(1); }
-    .btn { display: inline-block; padding: 16px 40px; border-radius: 50px; font-weight: bold; font-size: 1.2em; margin: 10px; }
-    .btn-primary { background: #22c55e; color: white; }
-    .btn-secondary { background: transparent; color: #22c55e; border: 2px solid #22c55e; }
-    .roadmap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
-    .phase { background: #1e293b; padding: 30px; border-radius: 16px; text-align: center; }
+    body { 
+      background: #020617; 
+      color: #e2e8f0; 
+      font-family: 'Arial', sans-serif; 
+      margin: 0; 
+      padding: 0; 
+    }
+    .container { 
+      max-width: 1100px; 
+      margin: 0 auto; 
+      padding: 40px 20px; 
+    }
+    .hero {
+      position: relative; 
+      width: 100%; 
+      height: 80vh; 
+      min-height: 600px; 
+      background: url('PASTE_YOUR_NEW_HOLIX_IMAGE_DIRECT_LINK_HERE.jpg') center/cover no-repeat; 
+      border-radius: 16px; 
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-overlay {
+      position: absolute; 
+      inset: 0; 
+      background: rgba(2, 6, 23, 0.65); 
+      border-radius: 16px;
+    }
+    .hero-text {
+      position: relative; 
+      z-index: 2; 
+      text-align: center; 
+      color: white;
+    }
+    .hero-text h1 {
+      font-size: 4.5em; 
+      color: #22c55e; 
+      text-shadow: 0 0 30px #000; 
+      margin: 0;
+    }
+    .hero-text p {
+      font-size: 2.2em; 
+      margin: 15px 0 0; 
+      text-shadow: 0 0 20px #000;
+    }
+    h2 { 
+      font-size: 2.8em; 
+      text-align: center; 
+      color: #22c55e; 
+      margin: 60px 0 30px; 
+    }
+    p { 
+      font-size: 1.3em; 
+      line-height: 1.9; 
+      text-align: center; 
+      max-width: 900px; 
+      margin: 0 auto 40px; 
+    }
+    .social-icons img { 
+      width: 50px; 
+      margin: 0 20px; 
+      filter: brightness(0) invert(1); 
+    }
+    .btn { 
+      display: inline-block; 
+      padding: 18px 45px; 
+      border-radius: 50px; 
+      font-weight: bold; 
+      font-size: 1.3em; 
+      margin: 15px; 
+    }
+    .btn-primary { 
+      background: #22c55e; 
+      color: white; 
+    }
+    .btn-secondary { 
+      background: transparent; 
+      color: #22c55e; 
+      border: 3px solid #22c55e; 
+    }
+    .roadmap-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 30px; 
+      margin: 60px 0; 
+    }
+    .phase { 
+      background: #1e293b; 
+      padding: 40px; 
+      border-radius: 16px; 
+      text-align: center; 
+    }
+    .phase h3 { 
+      color: #22c55e; 
+      margin-bottom: 20px; 
+      font-size: 1.8em;
+    }
+    footer p { 
+      text-align: center; 
+      font-size: 1.1em; 
+      color: #94a3b8; 
+      margin-top: 80px; 
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
 
-    <!-- Hero Image -->
-    <img src="YOUR_HOLIX_HERO_IMAGE_URL.jpg" alt="Holix the Turtle crossing the finish line with $H2GX">
+    <!-- Static Hero -->
+    <div class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <h1>$H2GX</h1>
+        <p>Slow Wins 🐢</p>
+      </div>
+    </div>
 
     <h1 style="font-size: 3em; text-align: center; margin: 40px 0; color: #22c55e;">Holix – The Legend of Slow Wins 🐢💚</h1>
 
-    <p style="font-size: 1.3em; line-height: 1.9; text-align: center; max-width: 900px; margin: 0 auto 40px;">
-      Meet <strong>Holix</strong>, the unbreakable turtle who's been grinding since the first bear market. Cracked shell scarred from endless red candles, yellow hard hat tilted like he's seen every dip and never sold once.<br><br>
+    <p>
+      Meet <strong>Holix the Hustler</strong> — a true gamer and diamond-handed HODLer who's been grinding since the first bear market. Cracked shell scarred from endless red candles, yellow hard hat tilted like he's seen every dip and never sold once.<br><br>
       While the hare chases pumps, rides "rug" candlesticks into crashes, and gets pinned under massive dumps, Holix just keeps moving—one steady step at a time.<br><br>
       He crosses every finish line waving the <strong>$H2GX</strong> flag, backed by a sign that reads <em>"Slow and Steady."</em> No hype. No rush. Just pure conviction.
     </p>
 
-    <p style="font-size: 1.5em; text-align: center; font-weight: bold; color: #86efac; margin: 50px 0;">
-      $H2GX isn't about quick flips. It's for the real ones—the HODLers who outlast every rug, every crash, every panic sell.
+    <p style="font-size: 1.5em; font-weight: bold; color: #86efac; margin: 50px 0;">
+      $H2GX isn't about quick flips. It's for the real ones—the gamers, the hustlers, the HODLers who outlast every rug, every crash, every panic sell.
     </p>
 
-    <h2 style="font-size: 2.8em; text-align: center; color: #22c55e; margin: 40px 0;">
-      $H2GX – Slow Wins.
-    </h2>
+    <h2>$H2GX – Slow Wins.</h2>
 
-    <p style="text-align: center; font-size: 1.3em; margin-bottom: 60px;">
+    <p>
       Hustle hard. Hold harder. Win forever.
     </p>
 
     <!-- Social Links -->
-    <div style="text-align: center; margin: 50px 0;">
-      <a href="YOUR_X_TWITTER_LINK" target="_blank" class="social-icons"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png" alt="X"></a>
-      <a href="YOUR_TELEGRAM_LINK" target="_blank" class="social-icons"><img src="https://img.icons8.com/ios-filled/50/ffffff/telegram.png" alt="Telegram"></a>
-      <a href="YOUR_DEXSCREENER_LINK" target="_blank" class="social-icons"><img src="https://cryptologos.cc/logos/dexscreener-dexscreener-logo.png?v=026" alt="DexScreener"></a>
-      <a href="YOUR_CHART_LINK" target="_blank" class="social-icons"><img src="https://img.icons8.com/ios-filled/50/ffffff/line-chart.png" alt="Chart"></a>
+    <div style="text-align: center; margin: 60px 0;">
+      <a href="YOUR_X_TWITTER_LINK" target="_blank"><img src="https://img.icons8.com/ios-filled/100/ffffff/twitterx.png" alt="X"></a>
+      <a href="YOUR_TELEGRAM_LINK" target="_blank"><img src="https://img.icons8.com/ios-filled/100/ffffff/telegram.png" alt="Telegram"></a>
+      <a href="YOUR_DEXSCREENER_LINK" target="_blank"><img src="https://cryptologos.cc/logos/dexscreener-dexscreener-logo.png?v=026" alt="DexScreener"></a>
+      <a href="YOUR_CHART_LINK" target="_blank"><img src="https://img.icons8.com/ios-filled/100/ffffff/line-chart.png" alt="Chart"></a>
     </div>
 
     <!-- CTA Buttons -->
-    <div style="text-align: center; margin: 50px 0;">
+    <div style="text-align: center; margin: 60px 0;">
       <a href="YOUR_BUY_LINK" class="btn btn-primary">Buy $H2GX</a>
       <a href="YOUR_TELEGRAM_LINK" class="btn btn-secondary">Join Community</a>
     </div>
 
     <!-- Roadmap -->
-    <h2 style="font-size: 2.8em; text-align: center; color: #22c55e; margin: 80px 0 40px;">Roadmap</h2>
+    <h2>Roadmap</h2>
     <div class="roadmap-grid">
       <div class="phase">
-        <h3 style="color: #22c55e; margin-bottom: 20px;">Phase 1 – Launch & Community</h3>
+        <h3>Phase 1 – Launch & Community</h3>
         <p>Fair launch<br>Build Turtle Gang<br>Organic growth<br>Meme supremacy</p>
       </div>
       <div class="phase">
-        <h3 style="color: #22c55e; margin-bottom: 20px;">Phase 2 – Hold & Stack</h3>
+        <h3>Phase 2 – Hold & Stack</h3>
         <p>Listings<br>Marketing push<br>HODLer rewards<br>More memes</p>
       </div>
       <div class="phase">
-        <h3 style="color: #22c55e; margin-bottom: 20px;">Phase 3 – Slow Wins</h3>
+        <h3>Phase 3 – Slow Wins</h3>
         <p>Moon together<br>Turtle takeover<br>Legacy status</p>
       </div>
     </div>
 
-    <p style="text-align: center; font-size: 1.1em; color: #94a3b8; margin-top: 60px;">
-      🐢🏁 #Holix #H2GX #TurtleGang #SlowAndSteady
-    </p>
+    <footer>
+      <p>🐢🏁 #Holix #H2GX #TurtleGang #SlowAndSteady</p>
+    </footer>
 
   </div>
 

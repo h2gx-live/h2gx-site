@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$H2GX – Slow Wins</title>
+  <title>$H2GX – The Slow and Steady Grind</title>
   <style>
     body { 
       background: #020617; 
@@ -16,24 +16,24 @@
       max-width: 1100px; 
       margin: 0 auto; 
       padding: 40px 20px; 
+      position: relative;
+      z-index: 2;
     }
     .hero {
       position: relative; 
       width: 100%; 
-      height: 80vh; 
-      min-height: 600px; 
-      background: url('PASTE_YOUR_NEW_HOLIX_IMAGE_DIRECT_LINK_HERE.jpg') center/cover no-repeat; 
-      border-radius: 16px; 
-      margin-bottom: 60px;
+      height: 100vh; 
+      min-height: 700px;
+      background: url('https://grok.x.ai/image/transparent-holix-gaming.png') center/cover no-repeat fixed; /* Replace with your hosted transparent PNG link if needed */
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 60px;
     }
     .hero-overlay {
       position: absolute; 
       inset: 0; 
-      background: rgba(2, 6, 23, 0.65); 
-      border-radius: 16px;
+      background: rgba(2, 6, 23, 0.75); 
     }
     .hero-text {
       position: relative; 
@@ -49,7 +49,7 @@
     }
     .hero-text p {
       font-size: 2.2em; 
-      margin: 15px 0 0; 
+      margin: 20px 0 0; 
       text-shadow: 0 0 20px #000;
     }
     h2 { 
@@ -66,18 +66,22 @@
       margin: 0 auto 40px; 
     }
     .social-icons img { 
-      width: 50px; 
-      margin: 0 20px; 
+      width: 60px; 
+      margin: 0 25px; 
       filter: brightness(0) invert(1); 
+      transition: transform 0.3s;
     }
+    .social-icons img:hover { transform: scale(1.2); }
     .btn { 
       display: inline-block; 
-      padding: 18px 45px; 
+      padding: 18px 50px; 
       border-radius: 50px; 
       font-weight: bold; 
-      font-size: 1.3em; 
+      font-size: 1.4em; 
       margin: 15px; 
+      transition: transform 0.3s;
     }
+    .btn:hover { transform: scale(1.05); }
     .btn-primary { 
       background: #22c55e; 
       color: white; 
@@ -114,68 +118,76 @@
 </head>
 <body>
 
+  <!-- Full-page Transparent Holix Gaming Background -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>$H2GX</h1>
+      <p>The Slow and Steady Grind 🐢🎮</p>
+    </div>
+  </div>
+
   <div class="container">
 
-    <!-- Static Hero -->
-    <div class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-text">
-        <h1>$H2GX</h1>
-        <p>Slow Wins 🐢</p>
-      </div>
-    </div>
-
-    <h1 style="font-size: 3em; text-align: center; margin: 40px 0; color: #22c55e;">Holix – The Legend of Slow Wins 🐢💚</h1>
+    <h1 style="font-size: 3em; text-align: center; margin: 40px 0; color: #22c55e;">Holix the Gaming Hustler 🐢💚</h1>
 
     <p>
-      Meet <strong>Holix the Hustler</strong> — a true gamer and diamond-handed HODLer who's been grinding since the first bear market. Cracked shell scarred from endless red candles, yellow hard hat tilted like he's seen every dip and never sold once.<br><br>
-      While the hare chases pumps, rides "rug" candlesticks into crashes, and gets pinned under massive dumps, Holix just keeps moving—one steady step at a time.<br><br>
-      He crosses every finish line waving the <strong>$H2GX</strong> flag, backed by a sign that reads <em>"Slow and Steady."</em> No hype. No rush. Just pure conviction.
+      Meet <strong>Holix the Gaming Hustler</strong> — a true gamer and diamond-handed HODLer grinding levels since the first bear market. Cracked shell from countless raids, yellow hard hat tilted, controller locked in — he’s built different.<br><br>
+      While hares chase hype and get rekt on rugs, Holix stays in the zone: farming wins, stacking green candles, HODLing through every boss fight.<br><br>
+      <strong>One win at a time. One green candle at a time.</strong>
     </p>
 
-    <p style="font-size: 1.5em; font-weight: bold; color: #86efac; margin: 50px 0;">
-      $H2GX isn't about quick flips. It's for the real ones—the gamers, the hustlers, the HODLers who outlast every rug, every crash, every panic sell.
+    <p style="font-size: 1.6em; font-weight: bold; color: #86efac; margin: 60px 0;">
+      $H2GX is the token for gamers who grind — not gamble.
     </p>
 
-    <h2>$H2GX – Slow Wins.</h2>
+    <h2>$H2GX – The Slow and Steady Grind</h2>
 
     <p>
-      Hustle hard. Hold harder. Win forever.
+      Hustle hard. Hold harder. Level up forever.
     </p>
 
-    <!-- Social Links -->
-    <div style="text-align: center; margin: 60px 0;">
-      <a href="YOUR_X_TWITTER_LINK" target="_blank"><img src="https://img.icons8.com/ios-filled/100/ffffff/twitterx.png" alt="X"></a>
-      <a href="YOUR_TELEGRAM_LINK" target="_blank"><img src="https://img.icons8.com/ios-filled/100/ffffff/telegram.png" alt="Telegram"></a>
-      <a href="YOUR_DEXSCREENER_LINK" target="_blank"><img src="https://cryptologos.cc/logos/dexscreener-dexscreener-logo.png?v=026" alt="DexScreener"></a>
-      <a href="YOUR_CHART_LINK" target="_blank"><img src="https://img.icons8.com/ios-filled/100/ffffff/line-chart.png" alt="Chart"></a>
+    <!-- Social Links (All Fixed & Working) -->
+    <div style="text-align: center; margin: 70px 0;">
+      <a href="https://www.twitch.tv/h2gx_562" target="_blank">
+        <img src="https://img.icons8.com/color/100/twitch.png" alt="Twitch">
+      </a>
+      <a href="https://x.com/h2gamingx" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/twitterx.png" alt="X">
+      </a>
+      <a href="https://t.me/HustleHolix" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/telegram.png" alt="Telegram">
+      </a>
+      <a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" target="_blank">
+        <img src="https://pump.fun/logo.png" alt="Buy on Pump.fun" style="width: 60px; border-radius: 50%;">
+      </a>
     </div>
 
     <!-- CTA Buttons -->
-    <div style="text-align: center; margin: 60px 0;">
-      <a href="YOUR_BUY_LINK" class="btn btn-primary">Buy $H2GX</a>
-      <a href="YOUR_TELEGRAM_LINK" class="btn btn-secondary">Join Community</a>
+    <div style="text-align: center; margin: 70px 0;">
+      <a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" class="btn btn-primary">Buy $H2GX</a>
+      <a href="https://t.me/HustleHolix" class="btn btn-secondary">Join the Grind</a>
     </div>
 
     <!-- Roadmap -->
     <h2>Roadmap</h2>
     <div class="roadmap-grid">
       <div class="phase">
-        <h3>Phase 1 – Launch & Community</h3>
-        <p>Fair launch<br>Build Turtle Gang<br>Organic growth<br>Meme supremacy</p>
+        <h3>Phase 1 – Launch & Grind</h3>
+        <p>Fair launch<br>Build the Turtle Gang<br>Gaming streams<br>Meme domination</p>
       </div>
       <div class="phase">
-        <h3>Phase 2 – Hold & Stack</h3>
-        <p>Listings<br>Marketing push<br>HODLer rewards<br>More memes</p>
+        <h3>Phase 2 – Level Up</h3>
+        <p>Listings<br>Community raids<br>HODLer rewards<br>Epic collabs</p>
       </div>
       <div class="phase">
-        <h3>Phase 3 – Slow Wins</h3>
-        <p>Moon together<br>Turtle takeover<br>Legacy status</p>
+        <h3>Phase 3 – Boss Fight Won</h3>
+        <p>Moon together<br>Gaming legacy<br>Top of the leaderboard</p>
       </div>
     </div>
 
     <footer>
-      <p>🐢🏁 #Holix #H2GX #TurtleGang #SlowAndSteady</p>
+      <p>🐢🎮🔥 #HolixTheHustler #H2GX #SlowAndSteadyGrind #OneGreenCandleAtATime</p>
     </footer>
 
   </div>

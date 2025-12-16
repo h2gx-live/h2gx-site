@@ -17,16 +17,16 @@
       top: 0; 
       left: 0; 
       width: 100%; 
-      background: rgba(2, 6, 23, 0.95); 
+      background: rgba(2, 6, 23, 0.9); 
       padding: 20px 40px; 
       z-index: 100; 
       text-align: center; 
       box-shadow: 0 4px 20px rgba(0,0,0,0.7);
     }
     header img {
-      max-height: 250px; /* Big fiery logo dominating the top */
+      max-height: 180px; 
       width: auto;
-      max-width: 95%;
+      max-width: 90%;
       display: block;
       margin: 0 auto;
     }
@@ -35,11 +35,11 @@
       width: 100%; 
       height: 100vh; 
       min-height: 700px;
-      background: url('holix-bg.png.JPG') center/cover no-repeat fixed; /* Your main background image */
+      background: url('hustle-bg.png') center/cover no-repeat fixed; /* Your background */
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 290px; /* Extra space for bigger logo */
+      margin-top: 220px; 
     }
     .hero-overlay {
       position: absolute; 
@@ -76,6 +76,9 @@
       color: #22c55e; 
       margin: 60px 0 30px; 
       text-shadow: 0 0 15px #000;
+      background: rgba(2, 6, 23, 0.6); 
+      padding: 20px; 
+      border-radius: 16px;
     }
     p { 
       font-size: 1.3em; 
@@ -84,8 +87,9 @@
       max-width: 900px; 
       margin: 0 auto 40px; 
       background: rgba(2, 6, 23, 0.6); 
-      padding: 20px; 
+      padding: 30px; 
       border-radius: 16px;
+      backdrop-filter: blur(5px);
     }
     .social-icons img { 
       width: 60px; 
@@ -94,6 +98,12 @@
       transition: transform 0.3s;
     }
     .social-icons img:hover { transform: scale(1.2); }
+    .social-icons {
+      background: rgba(2, 6, 23, 0.6); 
+      padding: 20px; 
+      border-radius: 16px;
+      display: inline-block;
+    }
     .btn { 
       display: inline-block; 
       padding: 18px 50px; 
@@ -112,6 +122,13 @@
       background: transparent; 
       color: #22c55e; 
       border: 3px solid #22c55e; 
+    }
+    .btn-container {
+      background: rgba(2, 6, 23, 0.6); 
+      padding: 30px; 
+      border-radius: 16px;
+      text-align: center;
+      margin: 70px 0;
     }
     .roadmap-grid { 
       display: grid; 
@@ -145,9 +162,9 @@
 </head>
 <body>
 
-  <!-- Big Fiery Logo Header (Full Top) -->
+  <!-- Big Logo Header -->
   <header>
-    <img src="hustle-logo.png" alt="$H2GX Hustle Holix Gaming Logo">
+    <img src="holix-logo.png.JPG" alt="$H2GX Logo">
   </header>
 
   <!-- Full-page Hero Background -->
@@ -181,7 +198,7 @@
     </p>
 
     <!-- Social Links -->
-    <div style="text-align: center; margin: 70px 0;">
+    <div class="social-icons">
       <a href="https://www.twitch.tv/h2gx_562" target="_blank">
         <img src="https://img.icons8.com/color/100/twitch.png" alt="Twitch">
       </a>
@@ -197,7 +214,7 @@
     </div>
 
     <!-- CTA Buttons -->
-    <div style="text-align: center; margin: 70px 0;">
+    <div class="btn-container">
       <a href="https://pump.fun/coin/BtBXvLSPfsheZ3qAAiQScaR6KiuF5KaQxfddvJkwpump" class="btn btn-primary">Buy $H2GX</a>
       <a href="https://t.me/HustleHolix" class="btn btn-secondary">Join the Grind</a>
     </div>
@@ -215,23 +232,4 @@
       </div>
       <div class="phase">
         <h3>Year 3 – Stack & Scale</h3>
-        <p>Utility integrations (gaming/NFT drops)<br>Global community expansion<br>Exclusive gaming tournaments & prize pools<br>Top-tier influencer raids<br>Consistent green candle energy</p>
-      </div>
-      <div class="phase">
-        <h3>Year 4 – Dominate the Leaderboard</h3>
-        <p>Mass adoption phase<br>Gaming platform integrations<br>Merch<br>Online events & virtual conventions<br>Charity streams & real-world impact<br>Legacy status in meme culture</p>
-      </div>
-      <div class="phase">
-        <h3>Year 5 – Moon & Legacy</h3>
-        <p>Sustainable long-term growth & ecosystem maturity<br>Full gaming ecosystem live<br>Holix becomes iconic mascot<br>Turtle Gang takes over<br>Slow and steady wins forever</p>
-      </div>
-    </div>
-
-    <footer>
-      <p>🐢🎮🔥 #HolixTheHustler #H2GX #SlowAndSteadyGrind #OneGreenCandleAtATime</p>
-    </footer>
-
-  </div>
-
-</body>
-</html>
+        <p>Utility integrations (gaming/NFT drops)<br>Global community expansion<br>Exclusive gaming tournaments
